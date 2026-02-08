@@ -1,0 +1,14 @@
+Q.1 Write a java Program to display 1 to nth natural numbers.
+Q.2 Write a java Program to display 1 to nth Even numbers.
+Q.3 Write a java Program to display 1 to nth odd numbers.
+Q.4 Write a java Program to take 2 integer from user start and end and find the sum of even number between start and end.
+Q.5 Write a java Program to take 2 integer from user start and end and find the sum of odd number between start and end.
+Solve above question using while loop
+Q6. Write java program to count number of digit in given number.
+Q7. write a java program to reverse given numbber.
+Q8. WAP to input number and calculate its factorial?
+ 4!=4*3*2*1
+Q9. WAP to input two values consider the first value as base and second as index and calculate its power.
+Q10. WAP to input number and check number is perfect or not?
+//A perfect number is a positive integer that equals the sum of its proper positive divisors (excluding the number itself).
+//The smallest perfect number is 6 (\(1+2+3=6\)), followed by 28 (\(1+2+4+7+14=28\)), 496, and 8.

@@ -1,0 +1,164 @@
+Q1. Write a java program to print all natural numbers from 1 to n. using while loop
+Q2. Write a java program to print all natural numbers in reverse (from n to 1). using a while loop.
+Q3. Write a java program to print all alphabets from a to z. - using while loop
+Q4. Write a java program to print all even numbers between 1 to 100.- using while loop
+Q5. Write a java program to print all odd numbers between 1 to 100.
+Q6. Write a java program to find the sum of all natural numbers between 1 to n.
+Q7. Write a java program to find the sum of all even numbers between 1 to n.
+Q8. Write a java program to find the sum of all odd numbers between 1 to n.
+Q9. Write a java program to print a multiplication table of any number.
+Q10. Write a java program to count the number of digits in a number.
+Q11. Write a java program to calculate the sum of digits in a number.
+Q12. Write a java program to calculate the product of digits in a number.
+Q13. Write a java program to enter a number and print its reverse.
+Q14. Write a java program to check whether a number is palindrome or not.
+Q15. Write a java program to print all ASCII characters with their values.
+Q16. Write a java program to find power of a number.
+Q17. Write a java program to find all factors of a number.
+Q18. Write a java program to find the first and last digit of a number.
+Q19. Write a java program to find the sum of the first and last digit of a number.
+Q20. Write a java program to swap first and last digits of a number.
+Q21. Write a java program to check Number Is Prime Number or Not.
+Q22. Write a java program to Check Number Is Perfect Number or Not.
+	Example : perfect number, a positive integer that is equal to the sum of its proper divisors. 
+	The smallest perfect number is 6,which is the sum of 1, 2, and 3. 
+	Other perfect numbers are 28, 496, and 8,128.
+Q23. Write a java program to Check Number Is Duck Number or Not.
+	Example : A Duck number is a positive number which has zeroes present in it, 
+	For example 3210, 8050896, 70709 are all Duck numbers.
+	Please note that a number with only leading 0s is not considered a Duck Number.
+	For example, numbers like 035 or 0012 are not considered as Duck Numbers.
+Q24. Write a java program to Check Number Is Strong Number or Not.
+	Example : A strong number is one in which the factorial of the digits equals the number itself. 1, 2, 145,
+	 such as 1, 2, 145 (1!+4!+5! = 1+24+120 = 145), and 40585 (4!+0!+5!+8!+5! = 40585).
+Q26. Write a java program to Check Number Is Neon Number or Not.
+	Example : A neon number is a number where the sum of digits of the square of the number is equal to the number.
+Q27. Write a java program to Check If a Number Is a Happy Number or Not.
+	Example : A number is called happy if it leads to 1 after a sequence of steps where in each step number is
+	replaced by the sum of squares of its digit, that is if we start with Happy Number and 
+	keep replacing it with digits square sum, we reach 1.
+        	Input: n = 19
+        	Output: True
+        	19 is Happy Number,
+        	1^2 + 9^2 = 82
+        	8^2 + 2^2 = 68
+        	6^2 + 8^2 = 100
+        	1^2 + 0^2 + 0^2 = 1
+        	As we reached 1, 19 is a Happy Number.
+Q28. Write a java program to Check Number Is Spy Number or Not.
+Example : A number is said to be a Spy number if the sum of all the digits is equal to the product of all digits.
+ 	Input : 1412
+	Output : Spy Number
+	Explanation :
+	sum = (1 + 4 + 1 + 2) = 8
+	product = (1 * 4 * 1 * 2) = 8
+	since, sum == product == 8
+Q29. Write a java program to display 1 to nth Prime Number.
+Q30.  Write a java program to display 1 to nth Perfect Number.
+Q31. Write a java program to display 1 to nth Duck Number.
+Q32. Write a java program to display 1 to nth Strong Number.
+Q33. Write a java program to display 1 to nth Armstrong Number.
+Q34. Write a java program to find the frequency of each digit in a given integer.
+Q35. Write a java program to enter a number and print it in words.(Pending....)
+Q36. Write a java program to find HCF (GCD) of two numbers.
+Q37. Write a java program to find LCM of two numbers.
+Q38. Write a java program to find all prime factors of a number.
+Q39. Write a Java program to check whether a given number is a Harshad number 
+(i.e., divisible by the sum of its digits) for numbers from 1 to n.
+Q40. Write a Java program to print all automorphic numbers between 1 and n. An automorphic number’s square ends with the number itself (e.g., 5² = 25).
+ Explanation:
+ Use loop to check square and a while loop to match last digits.
+Q41. Write a Java program to find the largest and smallest digit of a given number.
+ Explanation:
+ Use a while loop to extract digits, compare each digit to track max and min.
+Q42. Write a Java program to check whether a given number is a Kaprekar number or not, and to display all Kaprekar numbers up to n.
+A Kaprekar number is a non-negative integer, the representation of whose square can be split into two parts that add up to the original number itself.
+ For example:
+9² = 81 → split as 8 and 1 → 8 + 1 = 9
+45² = 2025 → split as 20 and 25 → 20 + 25 = 45   
+297² = 88209  88 | 209   88 + 209 = 297 a Kaprekar number.
+here, split the square such that the right part has the same number of digits as the original number.
+Q43. Write a Java program to check whether a given number is a Disarium number or not, and display all Disarium numbers up to n.
+ A Disarium number is a number whose sum of its digits powered with their respective positions is equal to the number itself.
+ Example: 135 is a Disarium number because 1¹ + 3² + 5³ = 1 + 9 + 125 = 135.
+Explanation:
+ Use a loop to count digits. Use another loop to extract each digit and 
+ calculate the digit raised to its position power using only loops (no Math.pow()).
+ Check if the sum equals the original number.
+/* Q44. Write a Java program to find all Abundant numbers up to n.
+ An Abundant number is a number for which the sum of its proper divisors is greater than the number itself.
+ Example: 12 is abundant because its proper divisors are 1, 2, 3, 4, 6 → sum = 16 > 12.
+Explanation:
+ Use nested loops: outer for numbers from 1 to n; inner for finding proper divisors and summing them. Compare sum with the number. */
+Q45. Write a Java program to print all Pronic numbers between 1 and n.
+ A Pronic number is the product of two consecutive integers, i.e., n(n+1).
+ Example: 2 (1×2), 6 (2×3), 12 (3×4) etc.
+Explanation:
+ Use a loop to check for each number from 1 to n. For each, use another loop to find if it can be expressed as x*(x+1).
+Q46. Write a Java program to display all Twin Primes between 1 and n.
+ Twin Primes are pairs of prime numbers that differ by 2.
+ Example: (3, 5), (5, 7), (11, 13).
+Explanation:
+ Use loops:
+First, loop through numbers from 2 to n.
+For each, check if it and the next number +2 are both prime using an inner loop.
+If both are prime, print the pair.
+Q47. Write a Java program to check whether a given number is a Krishnamurthy Number and list all Krishnamurthy numbers up to n.
+A Krishnamurthy number is a number whose sum of the factorials of its digits equals the number itself.
+Example: 145 → 1! + 4! + 5! = 145.
+Explanation:
+ Use loops :
+Outer loop for numbers from 1 to n.
+Inner loop to extract digits and compute each digit’s factorial with another nested loop.
+Sum and compare with the original number.
+Q48. Task: Take an integer n and an integer k. Rotate the number n by k places to the left without using arrays or strings.
+Example: n = 123456, k = 2 → output 345612.
+Hint: Use modulus and division to split and rearrange digits.
+Q48. Task: Take an integer n and an integer k. Rotate the number n by k places to the left without using arrays or strings.
+Example: n = 123456, k = 2 → output 345612.
+Hint: Use modulus and division to split and rearrange digits.
+Q49. Task: For a number n, calculate:
+Sum of digits at even places (from right)
+Sum of digits at odd places (from right)
+Finally print the difference of these sums.
+Example: n = 572631 → even places sum = 7+6+1 = 14, odd places sum = 5+2+3 = 10 → difference = 4.
+Hint: Use a loop with position tracking.
+Q50. Task: Identify the first digit in a number that does not repeat anywhere else, using only loops.
+Example: n = 1213451 → first non-repeating digit = 2.
+Q51. Write a java program to display following series :
+	1  2  2  4  3  6  4  8  5  10  6  12
+//Q52. Write a java program to display following series :
+// 2   729   4   512   6   343   8   216   10   125   12   64   14   27   16   8   18   1 
+Q53. Write a java program to display following series :
+   1  4  9  16  25  36  49  64  81  100
+Q54. Write a java program to display following series :
+ 1  2  4  7  11  16  22  29  37  46.
+Q55. Write a java program to display following series :
+  	5  3  10  6  15  9  20  12  25  15  30  18  35  21  40
+Q56. Write a Java program to display the following series:
+7   10   15   22   31   42   55   70
+  (Start at 7, differences increasing by 1 each time: +3, +5, +7...)
+Q57. Write a Java program to display the following series:
+     1 1 2 3 5 8 13 21 34
+(Fibonacci series using loop — first 9 terms)
+Q58. Write a Java program to display the following series:
+2 6 12 20 30 42 56 72 90 110
+(n(n+1) pattern 
+Q59. Write a Java program to display the following series: 
+100   81   64   49   36   25   16   9   4   1 
+(Perfect squares in reverse order)
+Q60. Write a Java program to display the following series: 
+3   6   12   24   48   96  192 
+(Each term doubles from the previous term starting at 3)
+
+
+
+
+
+
+
+
+
+	
+	
+

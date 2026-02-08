@@ -1,0 +1,9 @@
+Q1. Example: WAP to input number from keyboard and search digit present in number or not?
+Q2. Example: WAP to input number and check number is palindrome or not 
+    Input: 12321
+    Output: Number is palindrome
+Q3. Example:  WAP to input number and check number is armstrong or not?
+	For example,153 is a 3-digit Armstrong number because (1^{3}+5^{3}+3^{3}=1+125+27=153.
+Q4. WAP to input number and reverse it using a for loop?
+
+	
