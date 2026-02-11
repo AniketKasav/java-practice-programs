@@ -418,6 +418,266 @@ Q52. Write a java program to print this pattern.
 	1	2	#	4	5
 	1	#	3	4	5
 	#	2	3	4	5
+Q53. Write a java program to print this pattern.
+
+	1	0	0	0	1
+	0	1	0	1	0
+	0	0	1	0	0
+	0	1	0	1	0
+	1	0	0	0	1
+Q54.  Write a java program to print this pattern.
+
+	1	2	3	4	5
+	6			7
+	8		9
+	10	11
+	12
+Q55. Write a java program to print this pattern.
+			1
+   	      2   2
+  	    3   	3
+      4           4
+    5	5	5	5	5
+Q56. Write a java program to print this pattern.
+
+					1
+               1	2	1	
+           1   2	3	2	1
+       1   2	3	4	3	2	1
+ 		   1	2	3	2	1	
+                1	2	1	
+                    1
+Q57. Write a java program to print this pattern.(hard)
+
+			  	1
+             1	  1
+           1	2	1
+         1	 3    3   1
+       1   4	6	4	1
+Q58. Write a java program to print this pattern.
+
+	    		1
+   		      1   1
+    		1   	1
+ 	     1     		  1
+       1 	2	3   4	1
+Q59. Write a java program to print this pattern.
+
+	1       						9
+		2     			   		8
+			3				7
+				4		6
+					5
+				4 		6
+			3   			7
+		2     					8
+	1       						9
+Q60. Write a java program to print this pattern.
+
+1        							1
+1	2							2	1
+1	2	3					3	2	1
+1	2	3	4			4	3	2	1
+1	2	3	4	5	5	4	3	2	1
+Q61. Write a java program to print this pattern.
+
+	A	A	A	A	A
+	B	B	B	B	B
+	C	C	C	C	C
+	D	D	D	D	D
+	E	E	E	E	E
+Q62. Write a java program to print this pattern.
+
+A	B	C	D	E
+A	B	C	D	E
+A	B	C	D	E	
+A	B	C	D	E
+A	B	C	D	E
+Q63. Write a java program to print this pattern.
+
+	A	B	C	D	E
+	B	C	D	E	F
+	C	D	E	F	G
+	D	E	F	G	H
+	E	F	G	H	I
+Q64. Write a java program to print this pattern.
+
+	A
+	B	B
+	C	C	C	
+	D	D	D	D
+	E	E	E	E	E
+Q65. Write a java program to print this pattern.
+
+	E	E	E	E	E
+	D	D	D	D
+	C	C	C
+	B	B
+	A
+Q66. Write a java program to print this pattern.
+
+						A
+					B	A
+				C	B	A
+			D	C	B	A
+		E	D	C	B	A
+Q67. Write a java program to print this pattern.
+
+				A
+			A		B
+		A		B		C
+	A	    B	    C	    D
+A		B		C		D		E
+Q68. Write a java program to print this pattern.
+
+	A		B		C		D		E
+	     A	     B	     C        D
+			A		B		C
+				A	     B
+					A
+Q69. Write a java program to print this pattern.
+	
+	A	1	2	3	4
+	A	B	1	2	3
+	A	B	C	1	2
+	A	B	C	D	1
+	A	B	C	D	E
+Q70. Write a java program to print this pattern.
+
+	1
+	A	B
+	1	2	3
+	A	B	C	D
+	1	2	3	4	5
+Q71. Write a java program to print this pattern.
+
+	1	A	2	B	3
+	C	4	D	5	E
+	6	F	7	G	8
+	H	9	I	10	J
+	11	K	12	L	13
+Q72. Write a java program to print this pattern.
+
+				1
+			A	B	C
+		2	3	4	5	6
+	D	E	F	G	H	I	J
+7	8	9	10	11	12	13	14	15
+Q73. Write a java program to print this pattern.
+
+	A								I
+		B						H
+			C				G
+				D		F
+					E	
+Q74. Write a java program to print this pattern.
+		
+	A	B	C	D	E
+		1	2	3	4
+			A	B	C
+				1	2
+					A             
+Q75. Write a java program to print this pattern.
+
+A
+A	B	A
+A	B	C	B	A
+A	B	C	D	C	B	A
+A	B	C	D	E	D	C	B	A
+Q76. Write a java program to print this pattern.
+
+A
+1	2	1
+A	B	C	B	A
+1	2	3	4	3	2	1
+A	B	C	D	E	D	C	B	A
+Q77. Write a java program to print this pattern.
+
+					A
+				#	#	#
+			A	B	C	B	A
+		#	#	#	#	#	#	#
+	A	B	C	D	E	D	C	B	A
+		#	#	#	#	#	#	#
+			A	B	C	B	A
+				#	#	#
+					A
+
+Q78. Write a java program to print this pattern.
+
+	A 	B 	C 	D
+    A     		D
+	A			D
+	A	B	C	D
+Q79. Write a java program to print this pattern.
+
+	A	B	C	D	E	D	C	B	A	
+	A	B	C	D	  	D	C	B	A	
+	A	B	C    			C	B	A
+	A	B     					B	A
+	A       						A
+	A	B     					B	A
+	A	B	C   			C	B	A
+	A	B	C	D 		D	C	B	A
+	A	B	C	D	E	D	C	B	A
+Q80. Write a java program to print this pattern.
+
+	A
+	B	C
+	C		D
+	D			E
+	E	F	G	H	I
+Q81. Write a java program to print this pattern.
+
+	A      						A
+	A	B    				B	A
+	A	B	C  			C	B	A
+	A	B	C	D	D	C	B	A
+	A	B	C  			C	B	A
+	A	B   				B	A
+	A							A
+Q82. Write a java program to print this pattern.
+
+	A	B	C	D	E	D	C	B	A
+	A								A
+	A								A
+	A								A
+	A								A
+Q83. Write a java program to print this pattern.
+
+
+				1    
+			A	    B   
+		2				3  
+    B			    		C	 	
+4		5		6		7		8
+Q84. Write a java program to print this pattern.
+
+
+	1		A		2		B		3  
+		C	  	4      	D       5  
+			6		E		7  
+		F     	8      	G       9  
+	H		10		I		11		J
+Q85. Write a java program to print this pattern.
+
+
+	D
+	D	C
+	D	C	B
+	D	C	B	A
+	D	C	B
+	D	C
+	D
+
+
+
+
+
+
+
+
+
 
 
 
