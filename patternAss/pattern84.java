@@ -8,6 +8,15 @@
 	H		10		I		11		J          */
 	
 	
+/* may be there is some mistake in problem pattern output of this code is here :
+	1		A		2		B		3  
+		C	  	4      	D       5  
+			E		6		F  
+		7     	G      	8       H  
+	9		I		10		J		11 
+*/
+	
+	
 public class pattern84{
 	public static void main(String[] args){
 		char ch='A';
