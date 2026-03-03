@@ -1,0 +1,377 @@
+Q1. Write a Java program to display the message "This is first java program" on the screen.
+Input	:  No input
+Output :  This is first java program
+Explanation:	The program simply prints a fixed message without taking any input.
+Q2. Write a Java program to input all basic data types (int, float, double, char, boolean) and print their values.
+ Input:
+ int = 10
+ float = 5.5
+ double = 99.99
+ char = A
+ boolean = true
+ Output:
+ 10
+ 5.5
+ 99.99
+ A
+ true
+ Explanation:
+ The program accepts values of different data types and displays them.
+
+Q3. Write a Java program to enter two numbers and perform addition, subtraction, multiplication, division, and modulus.
+ Input:
+ Number1 = 20
+ Number2 = 5
+ Output:
+ Addition = 25
+ Subtraction = 15
+ Multiplication = 100
+ Division = 4
+ Modulus = 0
+ Explanation : All arithmetic operations are performed using the two input numbers.
+Q4. Write a Java program to enter length and breadth of a rectangle and calculate its area.
+ Formula: area = length × breadth
+ Input:
+ Length = 10
+ Breadth = 5
+ Output  :  Area = 50
+ Explanation  :  The area is calculated by multiplying length and breadth.
+Q5. Write a Java program to enter the radius of a circle and calculate its diameter, area, and circumference.
+ Input  :  Radius = 7
+ Output:
+ Diameter = 14
+ Area = 153.86
+ Circumference = 43.96
+ Explanation:
+ Formulas are applied using the given radius.
+Q6. Write a Java program to convert length from centimeter into meter and kilometer.
+ Input  :  Centimeter = 150
+ Output:
+ Meter = 1.5
+ Kilometer = 0.0015
+ Explanation  :  Centimeter is converted using standard unit conversions.
+Q7. Write a Java program to convert temperature from Fahrenheit to Celsius.
+ Formula: C = (F − 32) × 5 / 9
+ Input  :  Fahrenheit = 98
+ Output  :  Celsius = 36.67
+Explanation  :  The given formula converts Fahrenheit to Celsius.
+Q8. Write a Java program to convert temperature from Celsius to Fahrenheit.
+ Formula: F = (C × 9 / 5) + 32
+ Input  :  Celsius = 37
+ Output  :  Fahrenheit = 98.6
+ Explanation : Celsius value is converted using the formula.
+Q9. Write a Java program to enter two angles of a triangle and find the third angle.
+ Input:
+ Angle1 = 50
+ Angle2 = 60
+ Output : Third Angle = 70
+Explanation  :  Sum of angles in a triangle is 180°.
+Q10. Write a Java program to calculate the area of an equilateral triangle.
+ Input : Side = 6
+ Output : Area = 15.59
+ Explanation : Area is calculated using the formula for equilateral triangles.
+
+Q11. Write a Java program to enter marks of five subjects and calculate total marks and percentage.
+ Input : Marks: 70, 75, 80, 65, 60
+ Output : Total = 350		Percentage = 70%
+ Explanation : Total is sum of marks, percentage is total/5.
+Q12.Write a Java program to calculate simple interest.
+ Input:
+ Principal = 1000
+ Rate = 5
+ Time = 2
+ Output : Simple Interest = 100
+ Explanation : Simple interest formula is applied.
+
+
+Q13. Write a Java program to calculate compound interest.
+ Input : Principal = 2000
+ 	 Rate = 10
+	 Time = 2
+ Output : Compound Interest = 420
+ Explanation : Compound interest formula is used.
+Q14. Write a Java program to swap two numbers using a third variable.
+ Input: A = 5
+           B = 10
+ Output: A = 10
+              B = 5
+ Explanation : A temporary variable is used to swap values.
+Q15. Write a Java program to swap two numbers without using a third variable.
+ Input:
+ A = 4
+ B = 7
+ Output:
+ A = 7
+ B = 4
+ Explanation : Swapping is done using arithmetic operations.
+ Q16. Write a Java program to print the ASCII value of a given character.
+ Input : Character = A
+ Output : ASCII value = 65
+ Explanation : Each character has a unique ASCII value.
+Q17. Write a Java program to convert seconds into hours, minutes, and seconds.
+ Input : Seconds = 3665
+ Output:
+ Hours = 1
+ Minutes = 1
+ Seconds = 5
+ Explanation : Seconds are converted step by step.
+Q18. Write a Java program to convert days into years, months, and weeks.
+ Input : Days = 400
+ Output:
+ Years = 1
+ Months = 1
+ Weeks = 1
+ Explanation : Days are divided into years, months, and weeks.
+Q19. Write a Java program that reads a number and displays its cube.
+ Input : Number = 4
+ Output : Cube = 64
+ Explanation : Cube is calculated by multiplying the number three times.
+Q20. Write a Java program to compute the sum of digits of an integer.
+Input : 123
+Output : 6
+Explanation : Digits are added: 1 + 2 + 3 = 6.
+Q21. Write a Java program to reverse a number without using a loop.
+ Input : 123
+ Output : 321
+ Explanation : Digits are reversed using arithmetic operations.
+Q22. Write a Java program to find the first and last digit of a three-digit number without using a loop.
+ Input : 456
+ Output:
+ First = 4
+ Last = 6
+ Explanation : Division and modulus operations are used.
+Q23. Write a Java program to calculate the sum of the first and last digit without using a loop.
+ Input : 123
+ Output : 4
+ Explanation : 1 + 3 = 4.
+Q24. Write a Java program to check whether a number is a Neon number or not.
+ Input : 9
+ Output : Neon Number
+ Explanation : 9² = 81 → 8 + 1 = 9.
+Q25. Write a Java program to check whether a number is palindrome or not.
+ Input : 121
+ Output : Palindrome
+ Explanation : The reversed number is the same as original.
+Q26. Write a Java program to check whether a number is a Spy number.
+ Input: 1412
+ Output : Spy Number
+ Explanation : Sum = 8, Product = 8.
+Q27. Write a Java program to toggle the case of an alphabet using ASCII values.
+ Input : a
+ Output : A
+ Explanation : ASCII values are used to change case.
+Q28. Write a Java program to calculate the net salary of an employee.
+ Input:
+ Basic = 20000
+ HRA = 10%
+ DA = 5%
+ Tax = 2%
+ Output : Net Salary = 22600
+ Explanation : Allowances are added and tax is deducted.
+Q29.Write a Java program to find quotients and remainder using arithmetic operators.
+Input	:  Dividend = 20	Divisor = 3
+Output   :  Quotient = 6	Remainder = 2
+Explanation	:  Division and modulus are used.
+Q30. Write a Java program to check whether a number is a multiple of both 3 and 5.
+Input	:  15
+Output  :  Multiple of both 3 and 5
+Explanation :	A logical AND operator is used.
+Q31. Write a Java program to check whether a given number is even or odd.
+ Input : Number = 12
+ Output : Even
+ Explanation : A number divisible by 2 is even; otherwise, it is odd.
+Q32. Write a Java program to check whether a triangle is valid or not using its three angles.
+ Input:
+ Angle1 = 60
+ Angle2 = 60
+ Angle3 = 60
+ Output : Valid Triangle
+ Explanation : If the sum of all angles is exactly 180°, the triangle is valid.
+Q33. Write a Java program to check whether a triangle is equilateral, isosceles, or scalene.
+ Input:
+ Side1 = 5
+ Side2 = 5
+ Side3 = 5
+ Output : Equilateral Triangle
+ Explanation : All sides are equal, so the triangle is equilateral.
+Q34. Write a Java program to check whether a number is positive, negative, or zero.
+ Input : Number = -8
+ Output : Negative
+ Explanation : If the number is less than zero, it is negative.
+Q35. Write a Java program to check whether a number is divisible by both 5 and 11.
+ Input : Number = 55
+ Output : Divisible by 5 and 11
+ Explanation : 55 is divisible by both 5 and 11.
+Q36. Write a Java program to check whether a character is an alphabet or not.
+ Input : Character = A
+ Output : Alphabet
+ Explanation : Alphabet characters fall between A–Z or a–z.
+Q37. Write a Java program to input cost price and selling price and determine profit or loss.
+ Input:
+ Cost Price = 500
+ Selling Price = 650
+ Output : Profit
+ Explanation : Selling price is greater than cost price.
+Q38. Write a Java program to check whether a given year is a leap year or not.
+ Input : Year = 2024
+ Output : Leap Year
+ Explanation : A leap year is divisible by 4 and follows leap year rules.
+Q39. Write a Java program to input an alphabet and check whether it is a vowel or consonant.
+ Input : Alphabet = e
+ Output : Vowel
+ Explanation : Vowels include a, e, i, o, u.
+Q40. Write a Java program to check whether a character is an alphabet, digit, or special character.
+ Input : Character = @
+ Output : Special Character
+ Explanation : Characters outside alphabets and digits are special characters.
+Q41. Write a Java program to find the maximum among three numbers.
+ Input:
+ A = 10
+ B = 25
+ C = 15
+ Output : Maximum = 25
+ Explanation : 25 is the largest among the three numbers.
+Q42. Write a Java program to check whether a person is eligible to vote.
+ Input : Age = 19
+ Output : Eligible to Vote
+ Explanation : Minimum voting age is 18 years.
+Q43. Write a Java program to accept two integers and check whether they are equal.
+ Input:
+ A = 50
+ B = 50
+ Output : Equal
+ Explanation : Both numbers have the same value.
+Q44. Write a Java program to calculate gross salary based on basic salary conditions.
+ Input : Basic Salary = 18000
+ Output : Gross Salary = 34650
+ Explanation : HRA and DA percentages are applied based on salary slab.
+Q45. Write a Java program to find the minimum between two numbers.
+ Input:
+ A = 8
+ B = 12
+ Output : Minimum = 8
+ Explanation : 8 is smaller than 12.
+Q48. Write a Java program to find the minimum among three numbers.
+ Input:
+ A = 6
+ B = 3
+ C = 9
+ Output : Minimum = 3
+ Explanation : 3 is the smallest number.
+Q47. Write a Java program to find the maximum between two numbers.
+ Input:
+ A = 14
+ B = 9
+ Output : Maximum = 14
+ Explanation : 14 is greater than 9.
+Q48. Write a Java program to print Pass if marks are 40 or above, otherwise Fail.
+ Input : Marks = 38
+ Output : Fail
+ Explanation : Marks are below the passing criteria.
+ 
+Q49. Given marks out of 100, print grade using nested ternary operators.
+ Input : Marks = 82
+ Output : Good
+ Explanation : 82 falls in the “Good” category.
+Q50. Write a Java program to check whether a number is a perfect square using a ternary operator.
+ Input : Number = 49
+ Output : Perfect Square
+ Explanation : 7 × 7 = 49.
+Q51. Write a Java program to check whether the absolute difference between two numbers is greater than 10.
+ Input:
+ m = 25
+ n = 12
+ Output : Difference is greater than 10
+Explanation: |25 − 12| = 13.
+Q52.Write a Java program to find the middle value among three distinct integers using ternary operator.
+ Input:
+ p = 10
+ q = 20
+ r = 15
+ Output : Middle Number = 15
+ Explanation : 15 lies between 10 and 20.
+Q53. Write a java program to check eligibility based on percentage and income.
+ Input:
+ Percentage = 78
+ Income = 180000
+ Output : Eligible
+ Explanation : Percentage ≥ 75 and income < 200000.
+Q54. Write a Java program to print the larger digit between first and last digit of a three-digit number.
+ Input : Number = 582
+ Output : Larger Digit = 5
+ Explanation : First digit 5 is greater than last digit 2.
+Q55. Write a java program to check whether the middle digit is greater than the sum of first and last digits.
+ Input : Number = 853
+ Output : Not Greater
+ Explanation : Middle digit 5 < (8 + 3).
+Q56. Write a Java expression using arithmetic and assignment operators to calculate net salary.
+ Input:
+ Basic Salary = 35000
+ Tax Rate = 12%
+ Output : Net Salary = 30800
+ Explanation : Tax is deducted from basic salary.
+Q57. Write a java program to determine bonus based on performance rating.
+ Input : Rating = 9
+ Output : 15% Bonus
+ Explanation : Rating greater than 8 gets 15% bonus.
+Q58. Problem Statement First 
+The chef has to travel to another place. For this, he can avail any one of two cab services.
+The first cab service charges XX rupees.
+The second cab service charges YY rupees.
+The chef wants to spend the minimum amount of money. Which cab service should the Chef take?
+Input Format
+The first and only line of each test case contains two integers XX and YY - the prices of first and second cab services respectively.
+Output Format
+For each test case, output FIRST if the first cab service is cheaper, output SECOND if the second cab service is cheaper, output ANY if both cab services have the same price.
+You may print each character of FIRST, SECOND and ANY in uppercase or lowercase (for example, any, aNy, Any will be considered identical).
+Constraints
+1<=T<=100
+1<X<Y<=100
+Sample 1:
+Input 		Output:
+30 65    	First
+42 42    	Any
+90  50        	Second
+Explanation:
+Test case 11: The first cab service is cheaper than the second cab service.
+Test case 22: Both the cab services have the same price.
+Test case 33: The second cab service is cheaper than the first cab service.
+Q59. Problem Statement Second
+The chef is watching TV. The current volume of the TV is XX. Pressing the volume up button of the TV remote increases the volume by 1 while pressing the volume down button decreases the volume by 1. The chef wants to change the volume from XX to YY.
+ Find the minimum number of button presses required to do so.
+Input Format
+The first line contains a single integer TT - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two integers XX and YY - the initial volume and final volume of the TV.
+Output Format
+For each test case, output the minimum number of times Chef has to press a button to change the volume from XX to YY.
+Constraints
+1<=T <=100
+1<=X<=Y<=100
+Sample1
+ Input                    Output
+50 54                	4
+12 10                	2
+Explanation:
+Test Case 1: Chef can press the volume up button 4 times to increase the volume from 50 to 54.
+Test Case 2: Chef can press the volume down button  2 times to decrease the volume from 12 to 10.
+Q60. Problem
+Pooja would like to withdraw X $US from an ATM. The cash machine will only accept the transaction if X is a multiple of 5, and Pooja's account balance has enough cash to perform the withdrawal transaction (including bank charges). For each successful withdrawal the bank charges 0.50 $US.
+Calculate Pooja's account balance after an attempted transaction.
+Input
+Positive integer 0 < X <= 2000 - the amount of cash which Pooja wishes to withdraw.
+Nonnegative number 0<= Y <= 2000 with two digits of precision - Pooja's initial account balance.
+Output
+Output the account balance after the attempted transaction, given as a number with two digits of precision. If there is not enough money in the account to complete the transaction, output the current bank balance.
+Example - Successful Transaction
+Input:
+30 120.00
+Output:
+89.50
+Example - Incorrect Withdrawal Amount (not multiple of 5)
+Input:
+42 120.00
+Output:
+120.00
+Example - Insufficient Funds
+Input : 300 120.00
+Output :- 120.00

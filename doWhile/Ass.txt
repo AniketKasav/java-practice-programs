@@ -1,1 +1,0 @@
-Q1. Check using number is an armstrong number using do while loop.
