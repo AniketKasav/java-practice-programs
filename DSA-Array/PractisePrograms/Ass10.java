@@ -20,7 +20,9 @@ public class Ass10{
 			
 		System.out.print("Input the position where to delete : ");
 		int pos=sc.nextInt();
-		
+		if(pos<0 || pos>a.length){
+			System.out.print("Position is not valid !!");
+		}
 		//delete element 
 		for(int i=pos;i<a.length-1;i++){
 			a[i]=a[i+1];
