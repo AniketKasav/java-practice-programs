@@ -160,3 +160,29 @@ If array.length == 0, then the array is empty.
 Otherwise, the array contains elements.
 Input :- Array elements: { }
 Output :- Array is empty
+
+
+Q19. Given an integer array, replace all the negative numbers in the array with 0 and print the updated array.
+Explanation
+Traverse the array from the first element to the last.
+Check each element:
+If the element is negative, replace it with 0.
+If the element is zero or positive, keep it as it is.
+After completing the traversal, print the modified array.
+Input :- Array = [5, -3, 7, -1, 0, -6, 4]
+Output :- Updated Array = [5, 0, 7, 0, 0, 0, 4]
+
+
+Q20. Write a Java program to print all elements from an integer array that are greater than a given number.
+Explanation
+An integer array is given.
+A number N is also given.
+Traverse the array using a loop.
+Compare each element with N.
+If the element is greater than N, print it.
+Input :- Array: 10 25 5 40 18
+ Given Number: 20
+Output :- Elements greater than 20 :
+    25 40
+	
+
