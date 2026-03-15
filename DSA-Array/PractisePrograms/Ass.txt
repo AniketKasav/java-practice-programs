@@ -272,4 +272,240 @@ Output: [-1, -1, 7, -1, 10]
 Explanation:
  Elements divisible by 3 are 3, 6, 9. These are replaced with -1. Other elements remain unchanged.
 
+Q31. Replace First and Last Element with 0.
+Input:[5, 3, 7, 2]
+Output: [0, 3, 7, 0]
+Explanation:
+ The first element (5) and the last element (2) are replaced with 0. Middle elements remain the same.
 
+
+Q32. Replace all elements in the array that are multiples of 5 with the number 5 itself.
+Input: [10, 12, 15, 17, 20]
+Output: [5, 12, 5, 17, 5]
+Explanation:
+10 is divisible by 5 → replaced with 5.
+12 is not divisible by 5 → unchanged.
+15 is divisible by 5 → replaced with 5.
+17 is not divisible by 5 → unchanged.
+20 is divisible by 5 → replaced with 5.
+
+Q33. Check whether the given array is a palindrome.
+Input: {1, 2, 3, 2, 1}
+Output: true
+Explanation:
+ A palindrome reads the same forward and backward.
+ Forward: 1 2 3 2 1
+ Backward: 1 2 3 2 1
+ Since both are the same, the array is a palindrome.
+
+Q34. Return the first element that repeats in the array.
+Input: {10, 5, 3, 4, 3, 5, 6}
+Output: First repeating element is 5
+Explanation:
+Traverse from left:
+10 → first time.
+5 → first time.
+3 → first time.
+4 → first time.
+3 → already seen earlier → repeating, but not the first repeating (we must check carefully).
+5 → this was the earliest element that repeats.
+Therefore, the first repeating element is 5.
+
+Q35. Create a new array where each element is the square of the original.
+Input: arr = [2, 4, 6, 8]
+Output: newArr = [4, 16, 36, 64]
+Explanation: For each index, calculate arr[i] * arr[i] and store it in the new array.
+
+Q36. Replace each element with its factorial.
+Input: arr = [3, 4, 5]
+Output: arr = [6, 24, 120]
+Explanation: For each element, calculate factorial using repeated multiplication, and update the array element with this value.
+
+Q37. Count the number of prime numbers in an array.
+Input: arr = [2, 5, 6, 9, 11]
+Output: Count of prime numbers = 3
+Explanation: Check each element if it is prime (only divisible by 1 and itself), and count such elements.
+
+Q38. Count the number of Perfect numbers in an array.
+Input: arr = [6, 28, 10, 12, 496]
+Output: Count of Perfect numbers = 3
+Explanation: A Perfect number is equal to the sum of its proper divisors (excluding itself). 
+For each element, find the sum of divisors and compare with the number, then count.
+
+Q39. Write a program in java to find the smallest missing element from a sorted array?
+		Expected Output :
+		The given array is : 0 1 3 4 5 6 7 9
+		The missing smallest element is: 2
+
+Q40. Write a Java program to sort a given array in ascending & descending order.
+	Input : 	Array = [12, 5, 9, 34, 1]
+	Output : 	Ascending Order: [1, 5, 9, 12, 34]
+Descending Order: [34, 12, 9, 5, 1]
+Explanation:
+Sorting means arranging elements in a particular order.
+In ascending order, numbers are arranged from smallest to largest.
+For example: 1 < 5 < 9 < 12 < 34.
+In descending order, numbers are arranged from largest to smallest.
+For example: 34 > 12 > 9 > 5 > 1.
+The program should first sort the array in ascending order, then print the reverse of that order for descending.
+
+Q41. Write a program in java to find the smallest missing element from a sorted array?
+ Expected Output : The given array is : 0 1 3 4 5 6 7 9
+		         The missing smallest element is: 2
+	
+Q42. Write a program in java to to print next greater elements in a given unsorted array. 
+Elements for which no greater element exist, consider next greater element as -1.
+Expected Output :
+		The given array is : 5 3 10 9 6 13
+		Next Bigger Elements are:
+		Next bigger element of 5 in the array is: 10
+		Next bigger element of 3 in the array is: 10
+		Next bigger element of 10 in the array is: 13
+		Next bigger element of 9 in the array is: 13
+		Next bigger element of 6 in the array is: 13
+		Next bigger element of 13 in the array is: -1
+		Next Bigger Elements Array:
+		10 10 13 13 13 -1
+
+Q43. Write a program in java to find a subarray with given sum from the given array?
+Expected Output :
+		The given array is : 3 4 -7 1 3 3 1 -4
+		[0..1] -- { 3 4 }
+		[0..5] -- { 3 4 -7 1 3 3 }
+		[3..5] -- { 1 3 3 }
+		[4..6] -- { 3 3 1 }
+		
+	
+Q44. Write a program in java to find out the maximum difference between any two elements such that larger element appears after the smaller number.
+	Expected Output :
+		The given array is : 7 9 5 6 13 2
+		The elements which provide maximum difference is: 5, 13
+		The Maximum difference between two elements in the array is: 8
+
+
+Q45.Write a program in java to find two elements whose sum is closest to zero.
+Expected Output :
+		The given array is : 38 44 63 -51 -35 19 84 -69 4 -46
+		The Pair of elements whose sum is minimum are: [44, -46]
+			
+Q46.Write a program in java to find the maximum circular subarray sum of a given array.
+Expected Output :	The given array is : 10 8 -20 5 -3 -5 10 -13 11
+			The maximum circular sum in the above array is: 2
+
+				
+Q47.Write a program in java to find the maximum for each and every contigious subarray of size k from a given array.
+Expected Output:
+		The given array is:
+		1 3 6 21 4 9 12 3 16 10
+		The length of each subarray is: 4
+		The contagious subarray of length 4 and their maximum value are:
+		1 3 6 21 ----> 21
+		3 6 21 4 ----> 21
+		6 21 4 9 ----> 21
+		21 4 9 12 ----> 21
+		4 9 12 3 ----> 12
+		9 12 3 16 ----> 16
+		12 3 16 10 ----> 16
+
+
+Q48. Write a java program to merge of two given array.
+		Input :- First Array :- 1 2 3 4 5	
+             	 Second Array :-  6 7 8 9 10 
+				 Output :- 1 2 3 4 5 6 7 8 9 10
+
+
+Q49. Write a java program to merge of two given array.
+Input :- First Array :- 1 2 3 4 5
+             	 Second Array :-  6 7 8 9 10 
+				 Output :- 1 10 2 9 3 8 4 7 5 6
+
+
+Q50. Write a java program to find unique value in this given array.
+	Input :- array elements: 1, 2, 3, 5, 1, 5, 20, 2, 12, 10 
+	Output :-  All unique elements in the array are: 3, 20, 12, 10
+
+
+Q51. Write a java program to take input array from user and perform all operations in array.
+Input Array :  5732  8659  2534  9625  7354  1325	
+Case 1 :  Sort Number In Ascending Order.
+	    Output :- 2357  5689  2345  2569  3457  1235 				
+Case 2 : Sort Number In Descending Order.
+  Output :- 7532  9865  5432  9652  7543  5321				
+Case 3 : Store sum of digits at same index.
+	  Output :-  17  28  14  22  19  11	
+Case 4 : Store the even number at the first and odd number at the last of digit at same index.
+	   Output :-  2573  6859  4253  2695  4735  2135				
+Case 5 : Store only prime number at the same index of digit.
+	   Output :- 2573  5  253  25  357  235
+
+
+Q52. Write a java program to display top three value from array.
+	Sample Input: [78, 90, 90, 86, 85, 92, 70, 92]
+	Expected Output: 92, 90, 86
+
+
+Q53. You are given a large integer represented as an integer array digits, 
+where each digits[i] is the ith digit of the integer. The digits are ordered 
+from most significant to least significant in left-to-right order. 
+The large integer does not contain any leading 0's.
+Increment the large integer by one and return the resulting array of digits. 
+Example 1: 
+Input: digits = [1,2,3]    
+Output: [1,2,4] 
+Explanation: The array represents the integer 123. 
+Incrementing by one gives 123 + 1 = 124. 
+Thus, the result should be [1,2,4]. 
+Example 2: 
+Input: digits = [4,3,2,1]   
+Output: [4,3,2,2] 
+Explanation: The array represents the integer 4321. 
+Incrementing by one gives 4321 + 1 = 4322. 
+Thus, the result should be [4,3,2,2]. 
+
+
+Q54. Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. 
+You may assume that each input would have exactly one solution, and you may not use the 
+same element twice. 
+You can return the answer in any order. 
+Example 1: 
+Input: nums = [2,7,11,15], target = 9   
+Output: [0,1] 
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+
+Q55. Given an integer array nums, return all the triplets
+ [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+Notice that the solution set must not contain duplicate triplets.
+Example 1:
+Input: nums = [-1,0,1,2,-1,-4]
+Output: [[-1,-1,2],[-1,0,1]]
+Explanation: 
+nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
+nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
+nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
+The distinct triplets are [-1,0,1] and [-1,-1,2].
+Notice that the order of the output and the order of the triplets does not matter.
+Example 2:
+Input: nums = [0,1,1]
+Output: [ ]
+Explanation: The only possible triplet does not sum up to 0.
+Constraints:
+3 <= nums.length <= 3000
+-105 <= nums[i] <= 105
+ 
+ 
+Q56. Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
+	0 <= a, b, c, d < n
+	a, b, c, and d are distinct.
+	nums[a] + nums[b] + nums[c] + nums[d] == target
+You may return the answer in any order.
+Example 1:
+Input: nums = [1,0,-1,0,-2,2], target = 0
+Output: [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
+Example 2:
+Input: nums = [2,2,2,2,2], target = 8
+Output: [[2,2,2,2]]
+Constraints:
+	1 <= nums.length <= 200
+	-109 <= nums[i] <= 109
+	-109 <= target <= 109
