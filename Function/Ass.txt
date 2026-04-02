@@ -1,4 +1,0 @@
-function: function that retrun the table of number 
-
-Q1.Example: WAP to create function name as getMax(int arr[]): this function accepts 5
- elements in array as parameter and finds the max value and returns it.
