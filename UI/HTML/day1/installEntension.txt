@@ -1,0 +1,12 @@
+open in browser
+live server
+intellise for css
+Braket Pair COlorization Toggler
+css auto prefix
+auto rename tag
+auto close tag 
+error lens
+Prettier - Code formatter
+default formatter - prettier
+word wrap - on 
+vs code icon 
