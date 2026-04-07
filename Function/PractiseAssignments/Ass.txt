@@ -87,3 +87,48 @@ Pass number of terms to the function
 Use loop to generate series
 Print each term inside the function
 No recursion and no return type
+
+Q11. Write a Java method that takes two integers as input and returns their sum.
+Explanation
+The method receives two numbers
+It adds them
+Returns the result to the main method
+Method Signature - static int getSum(int a, int b)
+Input - a = 10, b = 20
+Output - Sum = 30
+
+Q12. Write a method that takes an integer and returns 1 if the number is even, otherwise returns 0.
+Explanation
+If number is divisible by 2 → Even
+Else → Odd
+Method returns an integer value
+Method Signature - static int isEven(int num)
+Input - num = 7 
+Output - Odd
+
+Q13. Write a Java method that accepts a number and returns its square.
+Explanation
+Square means number × number
+The method calculates and returns the result
+Method Signature - static int square(int n)
+Input - n = 5
+Output - Square = 25
+
+Q14. Write a method that takes two integers and returns the greater number.
+Explanation
+Compare both numbers
+Return the larger one
+Method Signature - static int findMax(int a, int b)
+
+Input - a = 12, b = 20
+Output - Maximum = 20
+
+Q15. Write a Java method that takes an integer and returns the count of digits in that number.
+Explanation
+Divide the number by 10 repeatedly
+Count how many times division happens
+Return the count
+Method Signature - static int countDigits(int num)
+Input - num = 4567
+Output - Digits = 4
+
