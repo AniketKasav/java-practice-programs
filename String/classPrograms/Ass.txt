@@ -1,1 +1,19 @@
 //1. All Basic String Methods
+
+2.Write a program to find the sum of digit present in given string
+Ex.  Given String  :  sth3j5j1jj     
+       output  : 3+5+1 = 9
+
+//3 Write a program to take a string from user and display it
+
+
+//4 Write a program to take a string a s input and count number of vowels, consonents, digits, special symbol
+
+
+//5 Write a program to find the number of  occurance of a given character in a given string
+
+//6 Example: WAP to input string and check string is palindrome or not
+Input: aba 
+Output: aba 
+
+//7 Example: WAP to input string and check string is anagram or not 
