@@ -1,0 +1,84 @@
+Problem List
+
+Question 72: Print All Subarrays
+Description:
+Print all possible subarrays of array size n.
+Input:
+[1,2,3]
+
+Output:
+[1] [1,2] [1,2,3] [2] [2,3] [3]
+=============================================================================
+Question 73: Sum of All Subarrays
+Description:
+
+Given an array of size n, calculate the sum of all possible subarrays.
+
+A subarray is a contiguous part of an array.
+Input:
+n = 3
+Array = [1, 2, 3]
+
+Output:
+Subarrays:
+[1] ? 1
+[1,2] ? 3
+[1,2,3] ? 6
+[2] ? 2
+[2,3] ? 5
+[3] ? 3
+
+Total Sum = 20
+Explanation:
+We use two loops:
+First loop selects starting index.
+Second loop selects ending index and keeps adding elements.
+
+Number of subarrays = n(n+1)/2
+For n=3 ? 6 subarrays.
+=================================================================================
+Question 74: Count Frequency of Each Element (Without Hashing)
+Description:
+Given an array, count how many times each element appears using nested loops (no HashMap allowed).
+Input:
+n = 5
+Array = [1, 2, 2, 3, 1]
+
+Output:
+1 ? 2 times
+2 ? 2 times
+3 ? 1 time
+
+Explanation:
+For each element:
+Loop through entire array again.
+Count matches.
+
+Outer loop runs n times.
+Inner loop runs n times.
+
+Time Complexity: O(n²)
+Because every element is compared with every other element.
+====================================================================================
+Question 75: Check Prime Number
+Description:
+Check whether a given number is prime or not.
+A prime number is divisible only by 1 and itself.
+Input:
+n = 29
+
+Output:
+29 is a Prime Number
+
+Explanation:
+We check divisibility from 2 up to ?n.
+
+If any number divides n ? Not prime.
+If none divides ? Prime.
+
+For n = 29
+We check up to ?29 ? 5.
+
+Time Complexity: O(?n)
+Because loop runs from 2 to square root of n.
+=================================================================================
