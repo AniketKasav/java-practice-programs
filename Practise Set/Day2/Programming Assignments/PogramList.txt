@@ -1,0 +1,20 @@
+21 Find maximum element LC 414
+22 Find minimum element LC 153
+23 Find sum of elements LC 1480
+24 Find average of array LC 1491
+25 Reverse an array LC 344
+26 Sort ascending order LC 912
+27 Sort descending order LC 912
+28 Linear search LC 704
+29 Count even and odd numbers LC 1295
+30 Copy array elements —
+31 Merge two arrays LC 88
+32 Find second largest element LC 414
+33 Remove duplicate elements LC 26
+34 Print even index elements —
+35 Print odd index elements —
+36 Count frequency of array elements LC 1207
+37 Find common elements in two arrays LC 349
+38 Swap alternate elements —
+39 Find smallest element LC 153
+40 Move zeros to end LC 283

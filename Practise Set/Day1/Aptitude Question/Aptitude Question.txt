@@ -1,0 +1,41 @@
+1. Student Marks Percentage
+A student appears for an examination and scores marks out of the total marks available. Find
+the percentage of marks obtained by the student.
+Example: A student scores 450 marks out of 600 marks. Find the percentage obtained.
+2. Percentage Increase in Price
+The price of an item increases after some time. Calculate the percentage increase in the price.
+Example: The price of a shirt increases from ₹800 to ₹920. Find the percentage increase.
+3. Percentage Discount
+A shopkeeper offers a discount on the marked price of a product. Calculate the final price after
+applying the discount percentage.
+Example: A product worth ₹2000 is available at a 15% discount. Find the final price.
+4. Percentage of Boys and Girls
+In a class, some students are boys and the remaining are girls. Find the percentage of boys or
+girls in the class.
+Example: In a class of 50 students, 30 are boys. Find the percentage of girls.
+5. Original Number from Percentage Increase
+A number is increased by a certain percentage and the final value is given. Find the original
+number.
+Example: A number is increased by 25% and becomes 500. Find the original number.
+6. Percentage Decrease in Population
+The population of a town decreases over a period of time. Calculate the percentage decrease in
+population.
+Example: The population decreases from 80,000 to 72,000. Find the percentage decrease.
+7. Salary Expense Percentage
+A person spends a fixed percentage of salary on a particular expense. Calculate the amount
+spent.
+Example: A person spends 40% of a ₹50,000 salary on rent. Find the rent amount.
+8. Passing Percentage in Examination
+A student must score a minimum percentage to pass an exam. Determine whether the student
+passes or fails based on marks obtained.
+Example: Passing marks are 35%. A student scores 280 marks out of 700. Check whether the
+student passes.
+9. Depreciation Percentage
+The value of an object decreases every year by a fixed percentage. Find the previous or present
+value using the depreciation percentage.
+Example: A machine depreciates by 10% annually and its current value is ₹90,000. Find its value
+last year.
+10. Election Vote Percentage
+A candidate receives a certain percentage of total votes in an election. Calculate the number of
+votes received by the candidate.
+Example: Candidate A receives 60% of 5000 votes. Find the number of votes received.

@@ -1,0 +1,11 @@
+Java Interview Questions
+1. What is Java and why is it called a platform-independent programming language?
+2. What are the main features of Java?
+3. What is JVM in Java and what is its role?
+4. What is JRE and why is it required to run Java programs?
+5. What is JDK and how is it different from JRE?
+6. What is Bytecode in Java and how is it generated?
+7. Differentiate between JDK, JRE, and JVM.
+8. What are the different data types available in Java?
+9. What are operators in Java and what are their different types?
+10. Explain the “Write Once, Run Anywhere” concept in Java. 

@@ -1,0 +1,13 @@
+TOPIC2: JAVA Interview Question
+__________________________________________________________________________________
+1. What is a constant in Java and how can you declare a constant variable?
+2. What is the purpose of the final keyword in Java constants?
+3. What are bitwise operators in Java and where are they used?
+4. Explain the difference between bitwise AND (&) and logical AND (&&) operators.
+5. What is the purpose of the main() method in Java?
+6. Why is the main() method declared as public static void main(String[] args)?
+7. Can a Java program run without the main() method? Explain.
+8. What are command line arguments in Java and how are they passed to a program?
+9. How do you access command line arguments inside the main() method?
+10. What is the Scanner class in Java and why is it used? 
+10. What is the Scanner class in Java and why is it used? 

@@ -1,0 +1,94 @@
+TOPIC3: JAVA MCQ Question
+___________________________________________________________________________________
+1. What will be the output of the following code?
+final int x = 10;
+x = 20;
+System.out.println(x);
+A. 10
+B. 20
+C. Compilation Error
+D. Runtime Error
+Answer: C. Compilation Error
+Reason: final variable value cannot be changed.
+2. What will this code print?
+int a = 5, b = 3;
+System.out.println(a & b);
+A. 7
+B. 1
+C. 8
+D. 0
+Answer: B. 1
+Reason: Bitwise AND of 5 (0101) and 3 (0011) = 0001
+3. What will be the output?
+int a = 5, b = 3;
+System.out.println(a && b);
+A. 1
+B. 0
+C. Compilation Error
+D. true
+Answer: C. Compilation Error
+Reason: && works only with boolean values.
+4. What is the correct way to declare a constant in Java?
+A. int final x = 10;
+B. final int x = 10;
+C. constant int x = 10;
+D. static int x = final 10;
+Answer: B. final int x = 10;
+5. What will be printed?
+public class Test {
+ public static void main(String[] args) {
+ System.out.println(args.length);
+ }
+}
+Run command: java Test A B C
+A. 0
+B. 1
+C. 3
+D. Error
+Answer: C. 3
+6. What is the output?
+int x = 10;
+System.out.println(~x);
+A. 10
+B. -11
+C. -10
+D. 11
+Answer: B. -11
+Reason: Bitwise NOT flips all bits.
+7. Which of the following will read input from the user?
+A. System.out
+B. Scanner
+C. String
+D. main
+Answer: B. Scanner
+8. What will happen if a Java program has no main method?
+A. It runs normally
+B. It throws runtime error
+C. Compilation succeeds but execution fails
+D. JVM ignores program
+Answer: C. Compilation succeeds but execution fails
+9. What is the output?
+int a = 10;
+int b = 20;
+System.out.println(a | b);
+A. 30
+B. 20
+C. 10
+D. 0
+Answer: A. 30
+Reason: Bitwise OR of 10 (1010) and 20 (10100) = 11110 (30)
+10. What will be the output?
+import java.util.Scanner;
+class Test {
+ public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+ int x = sc.nextInt();
+ System.out.println(x + 5);
+ }
+}
+Input: 10
+A. 5
+B. 10
+C. 15
+D. Error
+Answer: C. 15

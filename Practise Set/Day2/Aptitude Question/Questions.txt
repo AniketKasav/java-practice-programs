@@ -1,0 +1,24 @@
+TOPIC4: APTITUDE TOPIC
+________________________________________________________________________________
+1. Divisibility Problem
+Find the smallest number which when divided by 5, 6, and 8 leaves remainder 3 in each case.
+2. Remainder Concept
+A number divided by 7 leaves remainder 4. What will be the remainder when twice the number
+is divided by 7?
+3. LCM & HCF
+The LCM of two numbers is 120 and their HCF is 6. If one number is 24, find the other number.
+4. Unit Digit Problem
+Find the unit digit of 71037^{103}7103.
+5. Square Root Concept
+Find the least number which must be multiplied with 180 to make it a perfect square.
+6. Number Formation
+How many 3-digit numbers can be formed using digits 1, 2, 3, 4, 5 without repetition?
+7. Prime Factorization
+Find the number of trailing zeros in 100!100!100!.
+8. Rational & Irrational Numbers
+Determine whether 50\sqrt{50}50 is rational or irrational. Justify your answer.
+9. Divisibility Rule
+A number is divisible by 11 if the difference between the sum of digits at odd places and even
+places is divisible by what number?
+10. Average Based Number System
+The average of five consecutive even numbers is 24. Find the largest number
