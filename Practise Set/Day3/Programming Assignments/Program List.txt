@@ -1,0 +1,25 @@
+TOPIC1: Programming Question
+Functions Programs (10)
+41 Function to add two numbers LC 2235
+42 Function to swap two numbers —
+43 Function to check prime number LC 204
+44 Function to calculate factorial LC 172
+45 Function to calculate power LC 50
+46 Function to find GCD LC 1979
+47 Function to find LCM —
+48 Function to check Armstrong number LC 1134
+49 Function to print Fibonacci series LC 509
+50 Function returning largest of three numbers —
+
+--------------------------------------------------------
+Recursion Programs (10)
+51 Recursive factorial LC 509
+52 Recursive Fibonacci LC 509
+53 Recursive sum of natural numbers —
+54 Recursive power calculation LC 50
+55 Recursive reverse string LC 344
+56 Recursive palindrome check LC 125
+57 Recursive binary search LC 704
+58 Recursive GCD LC 1979
+59 Recursive decimal to binary —
+60 Recursive sum of digits LC 258

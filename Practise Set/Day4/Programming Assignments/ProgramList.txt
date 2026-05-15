@@ -1,0 +1,21 @@
+61 Add two matrices LC 566
+62 Subtract two matrices —
+63 Multiply two matrices LC 311
+64 Transpose a matrix LC 867
+65 Print diagonal elements LC 498
+66 Print boundary elements —
+67 Find row sum LC 1572
+68 Find column sum —
+69 Find largest element in matrix LC 2373
+70 Find smallest element in matrix LC 378
+71 Check identity matrix LC 1572
+72 Check symmetric matrix LC 867
+73 Check upper triangular matrix —
+74 Check lower triangular matrix —
+75 Print spiral matrix LC 54
+76 Print matrix in wave form —
+77 Find sum of diagonal elements LC 1572
+78 Interchange rows of matrix —
+79 Interchange columns of matrix —
+80 Count even and odd numbers in
+matrix

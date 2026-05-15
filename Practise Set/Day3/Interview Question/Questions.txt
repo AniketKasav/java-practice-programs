@@ -1,0 +1,18 @@
+TOPIC2: JAVA Interview question
+___________________________________________________________________
+_____________
+1. What is a function (method) in Java, and why is it used in programming?
+2. What is the difference between a method with return type and a void method
+in Java?
+3. What are method parameters, and how are arguments passed to a function in
+Java?
+4. What is method overloading in Java, and how is it different from method
+overriding?
+5. What is recursion in Java, and how does a recursive function work?
+6. What are the advantages and disadvantages of using recursion in Java
+programs?
+7. What is a base case in recursion, and why is it important?
+8. What is dynamic programming, and how is it different from recursion?
+9. What are memoization and tabulation in dynamic programming?
+10. How can arrays be passed to functions in Java, and what happens when an
+array is modified inside a method?

@@ -1,0 +1,29 @@
+TOPIC4: Aptitude Question
+1. Basic Average
+The average of 5 numbers is 20. If four of the numbers are 18, 22, 19, and 21, find
+the fifth number.
+2. Consecutive Numbers
+Find the average of first 10 natural numbers.
+3. Change in Average
+The average age of 6 students is 15 years. If one more student aged 21 joins
+them, what is the new average?
+4. Weighted Average
+A student scored 60, 70, and 80 marks in three subjects. Find the average marks.
+5. Average Speed
+A car travels 60 km at 30 km/h and another 60 km at 60 km/h. Find the average
+speed of the journey.
+6. Missing Value
+The average of 8 numbers is 25. If one number is removed, the average becomes
+24. Find the removed number.
+7. Combined Average
+The average weight of 5 boys is 50 kg and that of 3 girls is 45 kg. Find the
+combined average weight.
+8. Age Problem
+The average age of a family of 4 members is 30 years. A new member is born.
+What is the new average age after 2 years?
+9. Increase in Average
+The average of 10 numbers is 40. If each number is increased by 5, what will be
+the new average?
+10. Team Average
+The average score of a cricket team of 11 players is 45 runs. If the captain scored
+90 runs, find the average score of the remaining players.
