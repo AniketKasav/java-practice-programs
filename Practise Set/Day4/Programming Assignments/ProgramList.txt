@@ -17,5 +17,4 @@
 77 Find sum of diagonal elements LC 1572
 78 Interchange rows of matrix —
 79 Interchange columns of matrix —
-80 Count even and odd numbers in
-matrix
+80 Count even and odd numbers in matrix
