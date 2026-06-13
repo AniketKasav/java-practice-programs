@@ -1,0 +1,21 @@
+81 String compression LC 443
+82 Longest word in sentence LC 720
+83 Smallest word in sentence —
+84 Check rotation of strings LC 796
+85 Print all substrings —
+86 Print all permutations LC 46
+87 Longest common prefix LC 14
+88 String to integer conversion LC 8
+89 Integer to string conversion LC 12
+90 Balanced parentheses LC 20
+91 Longest palindrome substring LC 5
+92 Count special characters LC 3120
+93 Remove duplicate characters LC 1047
+94 Count occurrences of substring LC 28
+95 Implement string matching LC 28
+96 Find longest repeating character LC 424
+97 Reverse words in-place LC 151
+98 Group anagrams LC 49
+99 Minimum insertions for
+palindrome LC 1312
+100 Check valid shuffle of strings LC 97

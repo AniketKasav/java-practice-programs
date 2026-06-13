@@ -1,0 +1,67 @@
+Question 1: Write a Java program to implement a Student Result System.
+Create a class Student with attributes id, name, and marks.
+Accept marks from the user and determine whether the student Passes or Fails.
+If marks >= 35, print Pass, otherwise print Fail.
+
+Question 2: Write a Java program to implement a Number Checker.
+Create a class NumberCheck with a variable number.
+Check whether the number is Even or Odd using a class object.
+Asked In: Practice assignment
+
+Question 3: Write a Java program to implement Employee Salary Classification.
+Create a class Employee with attributes empId, name, and salary.
+Determine salary category:
+- Salary > 50000 => High Salary
+- Salary 20000 to 50000 => Medium Salary
+- Salary < 20000 => Low Salary
+
+Question 4: Write a Java program to implement a Voting Eligibility Checker.
+Create a class Person with attributes name and age.
+Check whether the person is eligible for voting.
+Condition: Age >= 18 => Eligible, Otherwise => Not Eligible.
+
+Question 5: Write a Java program to implement a Temperature Checker.
+Create a class Temperature with attribute temp.
+Check the weather condition:
+- temp > 35 => Hot
+- temp 20 to 35 => Normal
+- temp < 20 => Cold
+
+Question 6: Write a Java program to implement a Product Discount System.
+Create a class Product with attributes productId, name, and price.
+Apply discount based on price:
+- Price > 5000 => 20% Discount
+- Price 2000 to 5000 => 10% Discount
+- Price < 2000 => No Discount
+Display the final price after discount.
+
+Question 7: Write a Java program to implement an Electricity Bill Calculator.
+Create a class ElectricityBill with attributes customerId, name, and units.
+Calculate bill using slabs:
+- First 100 units => Rs.5 per unit
+- Next 100 units => Rs.7 per unit
+- Above 200 units => Rs.10 per unit
+Display total bill.
+
+
+Question 8: Write a Java program to implement a Bank Balance Checker.
+Create a class BankAccount with attributes accountNumber, name, and balance.
+Check account status:
+- balance >= 10000 => Premium Account
+- balance 5000 to 9999 => Normal Account
+- balance < 5000 => Low Balance Warning
+
+Question 9: Write a Java program to implement a Triangle Type Identifier.
+Create a class Triangle with attributes side1, side2, side3.
+Identify triangle type:
+- All sides equal => Equilateral
+- Two sides equal => Isosceles
+- All sides different => Scalene
+
+Question 10: Write a Java program to implement a Student Grade Calculator.
+Create a class StudentGrade with attributes name and marks.
+Calculate grade based on marks:
+- 80 to 100 => Grade A
+- 60 to 79 => Grade B
+- 40 to 59 => Grade C
+- Below 40 => Fail
