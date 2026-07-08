@@ -1,0 +1,26 @@
+Question 1: Create a base class Employee with attributes name and salary.
+Create a child class Manager that adds bonus.
+Calculate total salary using inheritance.
+
+Question 2: Create a base class Vehicle with attributes brand and speed.
+Create a child class Car that adds fuelType.
+Display all details using inheritance.
+
+Question 3: Create a base class Student with attributes name and rollNo.
+Create a child class Result that includes marks of 3 subjects.
+Calculate total and percentage.
+
+Question 4: Create a base class Account with accountNumber and balance.
+Create a child class SavingsAccount that adds interestRate.
+Calculate final balance after adding interest.
+
+Question 5: Create a base class Person with method display().
+Create a child class Employee that overrides display() to show additional details like designation.
+
+Question 6: Create a base class Book with attributes title and price.
+Create a child class EBook that adds fileSize.
+Store details of 3 EBooks using an array of objects and display all details.
+
+Question 7: Create a base class Patient with attributes name and age.
+Create a child class InPatient that adds roomNumber.
+Store details of 2 patients using an array of objects and display them.
