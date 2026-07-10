@@ -1,0 +1,10 @@
+41. Find the first non-repeated character.
+42. Find the first repeated character.
+43. Remove duplicate characters from a string.
+44. Find the maximum occurring character.
+45. Find the minimum occurring character.
+46. Count the frequency of each word in a sentence.
+47. Sort characters in a string alphabetically.
+48. Sort words in a sentence alphabetically.
+49. Count the number of sentences in a paragraph.
+50. Find the longest word in a sentence.

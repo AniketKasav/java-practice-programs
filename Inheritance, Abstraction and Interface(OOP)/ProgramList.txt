@@ -1,0 +1,12 @@
+Programming Question (try to solve 5)
+____________________________________________________________________
+1. Print each character of a string.
+2. Find the length of a string without using `length()`.
+3. Count the number of vowels in a string.
+4. Count the number of consonants in a string.
+5. Count the number of digits in a string.
+6. Count the number of special characters in a string.
+7. Convert a string to uppercase.
+8. Convert a string to lowercase.
+9. Reverse a string.
+10. Check whether a string is a palindrome.

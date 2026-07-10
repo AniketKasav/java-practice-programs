@@ -1,0 +1,10 @@
+51. Find the shortest word in a sentence.
+52. Check whether one string is a rotation of another.
+53. Check whether a string is a pangram.
+54. Print all substrings of a string.
+55. Print all prefixes of a string.
+56. Print all suffixes of a string.
+57. Find the longest substring without repeating characters.
+58. Find the longest palindromic substring.
+59. Find the shortest substring containing all characters of another string.
+60. Find all palindromic substrings.
