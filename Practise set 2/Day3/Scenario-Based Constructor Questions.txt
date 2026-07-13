@@ -1,0 +1,12 @@
+Scenario-Based Constructor Questions
+21.	In a Banking System, how would you use constructor overloading to create different types of accounts?
+22.	In an Employee Management System, why would you create multiple constructors for the Employee class?
+23.	Why do Singleton classes use a private constructor?
+24.	Can we call one constructor from another constructor? If yes, how?
+25.	What is the order of constructor execution in inheritance?
+26.	If both parent and child classes have constructors, which constructor executes first and why?
+27.	What happens if a constructor throws an exception?
+28.	Can an abstract class have a constructor? Why?
+29.	Can an interface have a constructor? Why or why not?
+30.	Why are constructors considered important in Object-Oriented Programming and software development?
+Aptitude question 

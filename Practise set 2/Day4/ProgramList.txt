@@ -1,0 +1,12 @@
+Programming Question 
+_______________________________________________________________________________
+31. Remove all vowels from a string.
+32. Count uppercase and lowercase letters separately.
+33. Toggle the case of each character.
+34. Convert the first character to uppercase.
+35. Find the frequency of every character in a string.
+36. Reverse each word in a sentence.
+37. Reverse the order of words in a sentence.
+38. Check whether two strings are anagrams.
+39. Find duplicate characters in a string.
+40. Find non-repeated characters in a string.
