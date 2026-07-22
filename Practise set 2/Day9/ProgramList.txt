@@ -1,0 +1,15 @@
+Programming Question 
+________________
+81. Generate all possible strings from a set of characters.
+82. Find the longest repeating subsequence.
+83. Find the longest common subsequence of two strings.
+84. Find the longest common substring of two strings.
+85. Find the edit distance between two strings.
+86. Implement wildcard pattern matching.
+87. Implement regular expression matching.
+88. Find the minimum number of insertions to make a string palindrome.
+89. Find the minimum number of deletions to make a string palindrome.
+90. Determine whether two strings are one edit away.   
+
+86 87 88 89 90 are   the hard problems on leetcode solve on leetcode               
+
