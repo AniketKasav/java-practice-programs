@@ -1,0 +1,13 @@
+Programming Question 
+91. Find the minimum window substring.
+92. Group all anagrams from an array of strings.
+93. Count the number of distinct substrings.
+94. Find the lexicographically smallest rotation of a string.
+95. Find the lexicographically largest substring.
+96. Check whether a string can be rearranged to form a palindrome.
+97. Implement the KMP (Knuth-Morris-Pratt) string matching algorithm.
+98. Implement the Rabin-Karp string matching algorithm.
+99. Implement the Trie data structure for string searching.
+100. Implement an autocomplete system using Trie and strings.
+
+this all problem available on leetcode many of them are the level hard solve on leetcode
