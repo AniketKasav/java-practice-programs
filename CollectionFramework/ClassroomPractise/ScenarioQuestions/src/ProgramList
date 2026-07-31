@@ -158,7 +158,6 @@ Enter elements:
 Output
 Total even numbers = 3
 
-////////////////////////////////////////////////////////////////
 Q9. Write a Java program to copy all elements from one Vector into another Vector.
 Description
 Create two Vectors.
@@ -188,6 +187,8 @@ Enter number of elements:
 0
 Output
 Vector is empty	
+
+
 Q11. Create a POJO class Student with fields:
 id
 name
@@ -211,6 +212,8 @@ Students scoring above 60:
 102 Amit 78
 103 Neha 88
 105 Kiran 67
+
+
 Q12.Create an Employee POJO class with:
 id
 name
@@ -248,6 +251,8 @@ Products below 500:
 
 P1 Mouse 450
 P3 PenDrive 350
+
+
 Q14.Create Player class:
 playerId
 playerName
@@ -266,6 +271,8 @@ Players with even runs:
 
 2 Rohit 80
 3 Gill 66
+
+
 Q15.Create Book class:
 bookId
 bookName
@@ -280,6 +287,8 @@ Input
 3 Python 400
 Output
 Total Book Price = 1250
+
+
 Q16.Create Customer class:
 id
 name
@@ -317,6 +326,8 @@ Low Stock Mobiles:
 
 2 Vivo 8
 3 Oppo 5
+
+
 Q18.Create Movie class:
 movieId
 movieName
@@ -336,6 +347,8 @@ Top Rated Movies:
 Pushpa
 KGF
 Jawan
+
+
 Q19.Create Order class:
 orderId
 customerName
@@ -351,6 +364,8 @@ Input
 3 Mohan 3100
 Output
 Highest Order Amount = 4200
+
+
 Q20.Create Laptop class:
 id
 brand
