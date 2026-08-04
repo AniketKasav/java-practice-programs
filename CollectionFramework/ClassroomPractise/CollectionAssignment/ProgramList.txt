@@ -1,0 +1,582 @@
+first 20 ques are in ScenarioQuestions(Folder)
+
+Q21.Design a Java program to manage student records using a Vector collection and a POJO class Student. The program should allow the user to store and manage student details and perform multiple logical operations on the stored data.
+
+Description
+Create a POJO class Student with fields:
+●	int id
+●	String name
+●	double marks
+●	String course
+Use a Vector<Student> to store student objects.
+
+Operations to Perform (5 operations)
+1.	Add Student records
+2.	Display all students
+3.	Search student by ID
+4.	Find student with highest marks
+5.	Count students enrolled in a particular course
+
+Input Example
+Enter number of students: 3
+
+Enter Student Details:
+101	Amit 78 Java
+102	Neha 88 Python
+103	Rahul 92 Java
+
+Enter ID to search: 102
+
+Enter course name: Java
+ 
+Output Example
+Student List:
+101	Amit 78 Java
+102	Neha 88 Python
+103	Rahul 92 Java
+Search Result:
+102	Neha 88 Python
+Highest Marks Student:
+103	Rahul 92 Java
+Total students in Java course: 2
+
+Q22.Problem Statement
+Create a Java program to manage employee salary details using Vector and POJO class Employee. The program must perform logical operations related to employee salary analysis.
+
+Description
+Employee fields:
+●	int empId
+●	String name
+●	double salary
+●	String department Store objects in Vector.
+Operations
+1.	Add employees
+2.	Display employees
+3.	Find employee with lowest salary
+4.	Calculate total salary of all employees
+5.	Display employees of a specific department
+
+Input
+Enter number of employees: 3
+
+Enter details:
+1 Raj 45000 IT
+2 Simran 52000 HR
+3 Kunal 39000 IT Enter department:
+ 
+IT
+
+Output
+Employee List:
+1 Raj 45000 IT
+2 Simran 52000 HR
+3 Kunal 39000 IT
+
+Lowest Salary:
+3 Kunal 39000 IT Total Salary = 136000
+IT Department Employees:
+Raj Kunal
+
+Q23.Problem Statement
+Develop a Product Inventory program using Vector and POJO class to perform inventory related operations.
+
+Description
+Product fields:
+●	int productId
+●	String productName
+●	int quantity
+●	double price
+
+Operations
+1.	Add products
+2.	Display products
+3.	Search product by name
+4.	Calculate total inventory value
+5.	Display out of stock products
+
+Input
+Enter number of products: 3
+
+Enter product details:
+1	Mouse 10 500
+2	Keyboard 0 800
+3	Monitor 5 7000
+ 
+Search product:
+Mouse
+
+Output
+Product List:
+1	Mouse 10 500
+2	Keyboard 0 800
+3	Monitor 5 7000
+
+Product Found:
+Mouse
+
+Total Inventory Value:
+45500
+
+Out of stock:
+Keyboard
+
+Q24.Problem Statement
+Create a library management program using Vector and Book POJO class.
+
+Description
+Fields:
+●	int bookId
+●	String title
+●	String author
+●	double price
+
+Operations
+1.	Add books
+2.	Display books
+3.	Find costliest book
+4.	Search by author
+5.	Count total books
+
+Input
+Enter books:
+3
+
+Enter details:
+1	Java Herbert 650
+2	SQL Korth 550
+3	Python Mark 700
+ 
+Search author:
+Herbert
+
+Output
+Book List:
+Java Herbert 650
+SQL Korth 550
+Python Mark 700
+
+Costliest Book:
+Python
+
+Books by Herbert:
+Java
+
+Total books = 3
+
+Q25.Problem Statement
+Develop a patient management system using Vector and POJO class Patient.
+
+Fields
+●	int patientId
+●	String name
+●	int age
+●	String disease
+
+Operations
+1.	Add patients
+2.	Display patients
+3.	Find oldest patient
+4.	Search by disease
+5.	Count patients above age 50
+
+Input
+3 patients
+
+101 Ravi 65 Diabetes
+102 Anil 45 Fever
+103 Sunil 72 BP
+
+Disease search: BP
+
+Output
+ 
+Patient List:
+101 Ravi 65 Diabetes
+102 Anil 45 Fever
+103 Sunil 72 BP
+Oldest Patient:
+Sunil
+BP Patients:
+Sunil
+Patients above 50:
+2
+Q26.Design a Java program to manage teacher information using a Vector collection and a POJO class Teacher. The program should allow storing teacher details and performing different logical operations on the stored records.
+
+Description
+Create a POJO class Teacher with fields:
+●	int teacherId
+●	String teacherName
+●	String subject
+●	double salary
+Store teacher objects inside a Vector<Teacher>.
+
+Operations to Perform
+The system must perform the following operations:
+1.	Add teacher records into Vector
+2.	Display all teacher details
+3.	Find teacher with highest salary
+4.	Search teacher by subject
+5.	Count teachers whose salary is above 50000
+
+Input Example
+Enter number of teachers: 3
+Enter teacher details:
+1 Suresh Java 55000
+2 Mahesh SQL 48000
+3 Ramesh Python 62000 Enter subject to search:
+ 
+Java
+
+Output Example
+Teacher List:
+1 Suresh Java 55000
+2 Mahesh SQL 48000
+3 Ramesh Python 62000
+
+Highest Salary Teacher:
+3 Ramesh Python 62000
+
+Java Teacher:
+Suresh
+
+Teachers with salary above 50000:
+2
+
+Q27. Create a Java application to manage customer orders using Vector and POJO class Order. The system must perform logical operations related to customer purchase records.
+
+Description
+Order class fields:
+●	int orderId
+●	String customerName
+●	String productName
+●	double amount
+
+Operations
+1.	Add orders
+2.	Display all orders
+3.	Find highest order amount
+4.	Search orders by customer name
+5.	Calculate total sales amount
+
+Input
+Enter orders:
+3
+
+101	Amit Laptop 55000
+102	Neha Mobile 20000
+103	Rahul Tablet 15000
+
+Search customer: Neha
+ 
+Output
+Order List:
+101	Amit Laptop 55000
+102	Neha Mobile 20000
+103	Rahul Tablet 15000
+
+Highest Order:
+Amit 55000
+
+Neha Orders:
+Mobile
+Total Sales:
+90000
+Q28. Develop a Gym Member Management system using Vector and POJO class to track member records.
+
+Description
+Fields:
+●	int memberId
+●	String name
+●	int age
+●	String plan
+
+Operations
+1.	Add members
+2.	Display members
+3.	Find youngest member
+4.	Search members by plan
+5.	Count members above age 30
+
+Input
+Enter members: 3
+
+1 Ajay 25 Monthly
+2 Vijay 35 Yearly
+3 Sanjay 40 Monthly
+
+Enter plan: Monthly
+
+Output
+Member List:
+ 
+Ajay 25 Monthly
+Vijay 35 Yearly
+Sanjay 40 Monthly
+Youngest Member:
+Ajay
+Monthly Plan Members:
+Ajay Sanjay
+Members above 30:
+2
+Q29.Create a Mobile shop management system using Vector and POJO class Mobile to perform logical analysis on mobile data.
+
+Description
+Fields:
+●	int mobileId
+●	String brand
+●	int storage
+●	double price
+
+Operations
+1.	Add mobile records
+2.	Display mobiles
+3.	Find costliest mobile
+4.	Search by brand
+5.	Count mobiles with storage above 128GB
+
+Input
+Enter mobiles:
+3
+1 Samsung 128 30000
+2 Apple 256 80000
+3 Vivo 64 15000
+Enter brand: Apple
+
+Output
+Mobile List: Samsung 128 30000
+Apple 256 80000
+ 
+Vivo 64 15000
+Costliest Mobile:
+Apple
+Apple Mobiles Found Mobiles above 128GB:
+1
+Q30.Design a Bus Reservation management program using Vector and POJO class Bus to manage bus details and perform logical operations.
+
+Description
+Fields:
+●	int busId
+●	String busName
+●	int seats
+●	String route
+
+Operations
+1.	Add bus details
+2.	Display bus details
+3.	Find bus with maximum seats
+4.	Search bus by route
+5.	Count buses having seats above 40
+
+Input
+Enter buses:
+3
+101 Shivneri 45 Pune-Mumbai
+102 Volvo 35 Pune-Nashik
+103 Express 50 Pune-Nagpur
+Search route:
+Pune-Mumbai
+
+Output
+Bus List:
+101 Shivneri 45 Pune-Mumbai
+102 Volvo 35 Pune-Nashik
+103 Express 50 Pune-Nagpur
+Bus with maximum seats: Express
+ 
+Route Found:
+Shivneri
+Buses above 40 seats:
+2
+
+Q31. Problem Statement
+
+Design a Java application to manage employee performance using a Vector<Employee> where each employee has attributes like id, name, department, salary, rating, and experience. Perform multiple analytical and CRUD operations.
+
+POJO Class
+
+Employee → id, name, dept, salary, rating, experience
+
+Description
+
+Store employee data and perform complex filtering, aggregation, and updates.
+
+Input
+5 Employees:
+(101, Amit, IT, 50000, 4.5, 3)
+(102, Rahul, HR, 40000, 3.8, 5)
+(103, Neha, IT, 70000, 4.9, 7)
+(104, Priya, Finance, 65000, 4.2, 6)
+(105, Karan, IT, 45000, 3.5, 2)
+
+Output
+
+●	Highest salary employee
+●	Avg salary per department
+●	Employees with rating > 4
+●	Sorted by experience
+●	Updated salary list
+
+10 Logical Operations
+
+1.	Add employees to vector
+2.	Display all employees
+3.	Find highest salary employee
+4.	Calculate average salary per department
+5.	Filter employees with rating > 4
+6.	Sort employees by experience (descending)
+7.	Increase salary by 10% for IT dept
+ 
+8.	Remove employees with rating < 3.5
+9.	Count employees per department
+10.	Find employee with maximum experience
+
+Q32. Problem Statement
+
+Create a system using Vector<Student> to manage course enrollments where each student has id, name, course, marks, attendance.
+
+POJO Class
+
+Student → id, name, course, marks, attendance
+
+Description
+
+Perform filtering, ranking, and performance analysis on students.
+
+Input
+4 Students:
+(1, A, Java, 85, 90)
+(2, B, Python, 78, 80)
+(3, C, Java, 92, 95)
+(4, D, C++, 60, 70)
+
+Output
+
+●	Topper student
+●	Course-wise average marks
+●	Students eligible for certificate
+
+10 Logical Operations
+
+1.	Add students
+2.	Display all students
+3.	Find topper (highest marks)
+4.	Calculate avg marks per course
+5.	Filter students with attendance > 85
+6.	Sort by marks (descending)
+7.	Count students per course
+8.	Update marks by +5 grace
+9.	Remove students with marks < 65
+10.	Find second highest marks
+
+Q33. Problem Statement
+ 
+Build a system using Vector<Product> to manage inventory and sales where each product has id, name, category, price, quantity, soldUnits.
+
+POJO Class
+
+Product → id, name, category, price, quantity, soldUnits
+
+Description
+
+Perform inventory tracking, sales analysis, and stock updates.
+
+Input
+3 Products:
+(1, Laptop, Electronics, 50000, 10, 5)
+(2, Phone, Electronics, 20000, 20, 15)
+(3, Chair, Furniture, 5000, 15, 7)
+
+Output
+
+●	Best selling product
+●	Total revenue
+●	Low stock products
+
+10 Logical Operations
+
+1.	Add products
+2.	Display all products
+3.	Find best-selling product
+4.	Calculate total revenue
+5.	Filter low stock (qty < 10)
+6.	Sort by price
+7.	Update stock after sale
+8.	Remove discontinued products
+9.	Count products per category
+10.	Find highest priced product
+
+Q34.Problem Statement
+
+Create a banking system using Vector<Account> to manage accounts and transactions with fields like accNo, name, balance, type, transactions.
+
+POJO Class
+
+Account → accNo, name, balance, type, transactions
+ 
+Description
+
+Perform balance updates, transaction tracking, and account filtering.
+
+Input
+3 Accounts:
+(101, A, 10000, Savings, 5)
+(102, B, 20000, Current, 10)
+(103, C, 5000, Savings, 3)
+
+Output
+
+●	Highest balance account
+●	Total bank balance
+●	Active accounts
+
+10 Logical Operations
+
+1.	Add accounts
+2.	Display all accounts
+3.	Find highest balance account
+4.	Calculate total balance
+5.	Filter savings accounts
+6.	Sort by balance
+7.	Deposit amount
+8.	Withdraw amount
+9.	Remove accounts with zero balance
+10.	Count transactions per account
+
+Q35.Problem Statement
+
+Develop a system using Vector<Movie> where each movie has id, title, genre, rating, views, likes.
+
+POJO Class
+
+Movie → id, title, genre, rating, views, likes
+
+Description
+
+Perform movie ranking, filtering, and popularity analysis.
+
+Input
+4 Movies:
+(1, A, Action, 4.5, 1000, 500)
+ 
+(2, B, Drama, 3.8, 800, 300)
+(3, C, Action, 4.9, 1500, 900)
+(4, D, Comedy, 4.0, 600, 200)
+
+Output
+
+●	Top rated movie
+●	Most viewed movie
+●	Genre-wise movies
+
+10 Logical Operations
+
+1.	Add movies
+2.	Display all movies
+3.	Find top rated movie
+4.	Find most viewed movie
+5.	Filter movies with rating > 4
+6.	Sort by views
+7.	Count movies per genre
+8.	Update likes (+100)
+9.	Remove movies with rating < 3.5
+10.	Find most liked movie
