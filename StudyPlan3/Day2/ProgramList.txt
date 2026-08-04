@@ -1,0 +1,25 @@
+Topic1: Collection 3 Question (solve in 2 hours) 
+ 
+4. Reverse a LinkedList
+Difficulty: Easy
+Problem Statement
+Given a LinkedList<Integer>, reverse the order of all elements without creating another LinkedList.
+Example
+Input: [10, 20, 30, 40]
+Output: [40, 30, 20, 10]
+________________________________________
+5. Find the Middle Element
+Difficulty: Medium
+Problem Statement
+Given a LinkedList<Integer>, find and print its middle element. If the list has an even number of elements, print the second middle element.
+Example
+Input: [1, 2, 3, 4, 5, 6]
+Output: 4
+________________________________________
+6. Check Whether a LinkedList is a Palindrome
+Difficulty: Medium
+Problem Statement 
+Given a LinkedList<Character>, determine whether it reads the same from left to right and right to left.
+Example
+Input: [R, A, D, A, R]
+Output: Palindrome
