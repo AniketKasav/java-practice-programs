@@ -66,7 +66,8 @@ Input:
  Element to search = 30
 Output : Element 30 found at index 2
 Explanation :
-We traverse the array and compare each element with the search key. If it matches, print "found" with index; otherwise print "not found".
+We traverse the array and compare each element with the search key. 
+If it matches, print "found" with index; otherwise print "not found".
 
 Q7. Write a java program to display the reverse array.
 Input : Array = {1, 2, 3, 4, 5}

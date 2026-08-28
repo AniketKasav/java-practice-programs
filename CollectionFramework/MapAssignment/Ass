@@ -1,0 +1,50 @@
+Map Within Map
+1.	Nested Map – Student Marks
+Create a Map<String, Map<String, Integer>> where the outer key is the student name and the inner Map contains subject names and marks. Write a program to: 
+o	Add 3 students. 
+o	Add marks for 3 subjects. 
+o	Display each student's marks. 
+
+2.	Nested Map – Employee Department
+Create a Map<String, Map<Integer, String>> where the outer key represents a department and the inner Map contains employee ID and employee name. Write a program to display all employees department-wise. 
+
+3.	Nested Map – Find Highest Marks
+Given:
+Map<String, Map<String, Integer>> studentData
+Find the student who has the highest marks in Mathematics.
+
+4.	Nested Map – Update Value
+Given a nested Map containing employee salaries department-wise, write a program to increase the salary of a particular employee by 10%. 
+
+Comparable
+5.	Sort Employees Using Comparable
+Create an Employee class with:
+	id
+	name
+	salary
+Implement Comparable<Employee> and sort employees based on salary in ascending order.
+
+6.	Sort Students Using Comparable
+Create a Student class with:
+rollNo
+name
+percentage
+Implement Comparable<Student> to sort students based on percentage in descending order.
+
+Comparator
+7.	Sort Employees Using Comparator
+Create an Employee class and use Comparator to sort employees based on name alphabetically, without modifying the Employee class. 
+
+8.	Multiple Comparators
+Create an Employee class containing id, name, age, and salary. Write separate Comparators to sort employees by: 
+o	Salary 
+o	Age 
+o	Name 
+
+9.	Comparator with Tie-Breaking
+Given a list of employees, sort them by salary in descending order. If two employees have the same salary, sort them by name alphabetically. 
+
+10.	Map + Comparator – Sort Map by Value
+Given: 
+Map<String, Integer> employees = new HashMap<>();
+where the key is employee name and the value is salary, write a program to sort the Map entries based on salary in descending order using Comparator.

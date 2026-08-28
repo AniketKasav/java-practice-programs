@@ -1,0 +1,128 @@
+Question 1: Write a Java program to handle ArithmeticException when a number is divided by zero.
+
+Accept two integer numbers from the user and perform division. If the denominator is zero, 
+handle the exception and display a proper message instead of terminating the program.
+Asked In Practice Assignment
+Input:
+Enter first number: 10
+Enter second number: 0
+
+Output:
+Exception occurred: Cannot divide by zero
+
+Explanation:
+ArithmeticException is thrown when dividing by zero. Use try-catch block to catch this exception. 
+In the catch block, display an error message explaining that division by zero is not allowed.
+ This prevents the program from crashing and allows graceful error handling.
+ 
+ ========================================================
+ Question 2: Write a Java program to handle ArrayIndexOutOfBoundsException while accessing array elements.
+
+Create an integer array of fixed size and allow the user to enter an index number.
+ If the index is beyond array size, handle the exception properly.
+Asked In Practice Assignment
+Input:
+Enter array size: 5
+Enter index to access: 7
+
+Output:
+Exception occurred: Index is out of range
+
+Explanation:
+ArrayIndexOutOfBoundsException occurs when accessing array index that does not exist. 
+If user enters index 7 but array size is 5 (valid indices 0-4), exception is thrown. 
+Catch this exception and display user-friendly message about valid range.
+
+===============================================================
+Question 3: Write a Java program to handle NumberFormatException while converting string into integer.
+
+Accept a number in string format from the user and convert it into integer using parsing.
+If the input is not numeric, handle the exception.
+Asked In Practice Assignment
+Input:
+Enter number: ABC
+
+Output:
+Invalid number format
+
+Explanation:
+NumberFormatException is thrown when Integer.parseInt() or similar methods receive non-numeric string input.
+When user enters 'ABC' instead of a number, parsing fails because alphabetic characters cannot be converted to integers.
+ Catch NumberFormatException and display message that input must be numeric. 
+ This exception handling prevents program crash and provides user feedback.
+
+===================================================================
+
+Question 4: Write a Java program to handle NullPointerException.
+
+Create a string variable and assign null value. Try to find its length and handle the exception using try-catch block.
+Asked In Practice Assignment
+Input:
+String value: null
+
+Output:
+Exception occurred: String value is null
+
+Explanation:
+NullPointerException occurs when trying to call methods on null reference.
+ When string variable is assigned null value and length() method is called, 
+ exception is thrown because there is no actual string object. Use try-catch to handle this
+ and display appropriate error message. Always check for null before calling methods on objects.
+ 
+===================================================================
+Question 5: Write a Java program to demonstrate multiple catch blocks.
+
+Accept two numbers and perform division and also store the result in an array.
+Handle both ArithmeticException and ArrayIndexOutOfBoundsException separately.
+Asked In Practice Assignment
+Input:
+Enter number1: 20
+Enter number2: 0
+
+Output:
+Arithmetic Exception handled
+
+Explanation:
+Multiple catch blocks allow handling different exception types differently.
+First catch block handles ArithmeticException for division by zero. Second catch block handles
+ArrayIndexOutOfBoundsException for invalid array access. Each block provides specific
+error handling for its exception type.
+
+=================================================================
+
+Question 6: Write a Java program to demonstrate finally block execution.
+
+Perform division of two numbers and display result. Whether an exception occurs or not, the finally block must execute.
+Asked In Practice Assignment
+Input:
+Enter number1: 15
+Enter number2: 3
+
+Output:
+Result is: 5
+Finally block executed
+
+Explanation:
+Finally block always executes regardless of whether exception occurred or not.
+ It is used for cleanup operations like closing files or connections. 
+ In this case, finally block executes after division is performed and result is displayed.
+
+=============================================================
+
+/*Question 7: Write a Java program to handle InputMismatchException.
+
+Accept integer input from the user. If the user enters a character instead of an integer, handle exceptions.
+Asked In Practice Assignment
+Input:
+Enter number: A
+
+Output:
+Invalid input type
+
+Explanation:
+InputMismatchException is thrown by Scanner when input does not match expected data type.
+When user enters character "A" for integer input, exception is thrown.
+Catch this exception and display message about correct input format required.  */
+
+==============================================================
+

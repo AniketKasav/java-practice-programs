@@ -1,0 +1,140 @@
+Q21.Problem Statement
+ Create a Student class with fields id, name, and marks.
+ Store Student objects in an ArrayList and count students whose marks are greater than 70.
+Input:
+ (1,Ram,75)
+ (2,Sam,65)
+ (3,Amit,90)
+Output:
+ Count: 2
+Q22.Problem Statement
+ Create an Employee class with id, name, and salary. Store Employee objects in an ArrayList and display the employee having highest salary.
+Input:
+ (1,Raj,25000)
+ (2,Amit,40000)
+ (3,Rohit,35000)
+Output:
+ Highest Salary Employee: Amit
+Q23.Problem Statement
+ Create a Product class with id, name, and price. Store objects in an ArrayList and count how many products have price greater than 500.
+Input:
+ (1,Pen,20)
+ (2,Shoes,1500)
+ (3,Bag,800)
+Output:
+ Count: 2
+Q24.Problem Statement
+ Create a Person class with id, name, and age. Store Person objects in an ArrayList and display the youngest person.
+Input:
+ (1,Ram,25)
+ (2,Sam,18)
+ (3,Amit,30)
+Output:
+ Youngest Person: Sam
+Q25.Problem Statement
+ Create a Student class with id, name, and marks. Count students who scored 35 or above.
+Input:
+ (1,Ram,25)
+ (2,Sam,45)
+ (3,Amit,60)
+Output:
+ Passed Students: 2
+Q26.Problem Statement
+ Create a Product class with id, name, and price. Display the product having minimum price.
+Input:
+ (1,Laptop,50000)
+ (2,Mouse,700)
+ (3,Keyboard,900)
+Output:
+ Lowest Price Product: Mouse
+Q27.Problem Statement
+ Create Employee objects and count how many employee names start with letter A.
+Input:
+ Ajay
+ Ram
+ Amit
+Output:
+ Count: 2
+Q28.Problem Statement
+ Create Student objects in ArrayList. Sort and display students in descending order based on marks.
+Input:
+ Ram-60
+ Sam-85
+ Amit-70
+Output:
+ Sam
+ Amit
+ Ram
+Q29.Problem Statement
+ Write a Java program to store array elements into an ArrayList and calculate total sum.
+Input:
+ [10,20,30,40]
+Output:
+ Sum: 100
+Q30.Problem Statement
+ Write a Java program to store two arrays into an ArrayList and merge all elements.
+Input:
+ [1,2,3]
+ [4,5,6]
+Output:
+ [1,2,3,4,5,6]
+Q31.Problem Statement
+ Write a Java program to store integers in an ArrayList and count negative numbers.
+Input:
+ [10,-5,20,-8,-1]
+Output:
+ Negative Count: 3
+Q32.Problem Statement
+ Write a Java program to store numbers from 1 to n in an ArrayList where one number is missing. Find the missing number.
+Input:
+ [1,2,4,5]
+Output:
+ Missing Number: 3
+Q33.Problem Statement
+ Write a Java program to store strings in an ArrayList and count how many strings are palindrome.
+Input:
+ ["madam","java","level","code"]
+Output:
+ Palindrome Count: 2
+Q34.Problem Statement
+ Write a Java program to store strings in an ArrayList and display the shortest string.
+Input:
+ ["Java","C","Python","Go"]
+Output:
+ Shortest String: C
+Q35.Problem Statement
+ Write a Java program to store strings in an ArrayList and convert all strings into uppercase.
+Input:
+ ["java","python","html"]
+Output:
+ ["JAVA","PYTHON","HTML"]
+Q36.Problem Statement
+ Write a Java program to count how many strings in an ArrayList end with letter 'a'.
+Input:
+ ["Java","Kavya","Code","Data"]
+Output:
+ Count: 3
+Q37.Problem Statement
+ Write a Java program to store strings in an ArrayList and display common repeated characters.
+Input:
+ ["apple","banana"]
+Output:
+ Common Character: a
+Q38.Problem Statement
+ Write a Java program to replace spaces from all strings in ArrayList with '-'.
+Input:
+ ["Java Program","Array List"]
+Output:
+ ["Java-Program","Array-List"]
+Q39.Problem Statement
+ Write a Java program to store strings in ArrayList and count total characters of all strings.
+Input:
+ ["Java","Code","Hi"]
+Output:
+ Total Characters: 10
+Q40.Problem Statement
+ Write a Java program to store strings in ArrayList and display the string containing maximum vowels.
+Input:
+ ["Apple","Orange","Sky"]
+Output:
+ String with Maximum Vowels: Orange
