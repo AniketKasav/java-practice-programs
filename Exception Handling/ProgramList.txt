@@ -125,4 +125,160 @@ When user enters character "A" for integer input, exception is thrown.
 Catch this exception and display message about correct input format required.  */
 
 ==============================================================
+Question 8: Write a Java program to demonstrate try-catch without exception.
+
+Write code inside a try block which does not generate exceptions and show program flow.
+Asked In Practice Assignment
+Input:
+Enter number: 5
+
+Output:
+Number is: 5
+Program executed successfully
+
+Explanation:
+Try block executes successfully when no exception occurs. The code runs normally and completes execution.
+ This demonstrates that try-catch is not only for error conditions but also validates code execution flow. 
+ Finally block executes after successful try block completion.
+
+================================================================
+Question 9: Write a Java program to print custom error messages using catch blocks.
+
+Accept age from users. If age is negative, throw exceptions and print proper messages.
+Asked In Practice Assignment
+Input:
+Enter age: -5
+
+Output:
+Invalid age entered
+
+Explanation:
+Custom error messages in catch blocks provide clear information about what went wrong. 
+When age is negative (-5), validation fails and exception is caught. 
+Custom message "Invalid age entered" informs user about the specific problem instead of generic error.
+
+======================================================================
+Question 10: Write a Java program to demonstrate nested try blocks.
+
+Create nested try blocks where the inner block handles ArithmeticException and 
+outer handles ArrayIndexOutOfBoundsException.
+Asked In Practice Assignment
+Input:
+Enter number: 10
+Enter divisor: 0
+
+Output:
+Inner exception handled
+
+Explanation:
+Nested try blocks allow handling different exceptions at different levels. 
+Inner try block catches ArithmeticException when divisor is zero. 
+Outer try block can catch ArrayIndexOutOfBoundsException if it occurs. 
+This hierarchical exception handling provides fine-grained control.
+
+=========================================================================
+/*Question 11: Write a Java program to create a custom exception for invalid marks.
+
+Accept student marks. If marks are greater than 100 or less than 0, throw user defined exceptions.
+Asked In Practice Assignment
+Input:
+Enter marks: 120
+
+Output:
+Invalid Marks Exception
+
+Explanation:
+Custom exceptions extend Exception and are created for domain-specific errors.
+ When marks (120) exceed valid range (0-100), custom exception is thrown for InvalidMarks. 
+ This provides meaningful error information specific to marks validation. 
+ Implementing custom exceptions allows developers to define application-specific
+ error types for better error handling and clearer code intent.   */
+ 
+=======================================================================
+
+/*Question 12: Write a Java program to use the throw keyword.
+
+Accept a number from the user. If the number is negative, throw ArithmeticException manually.
+Asked In Practice Assignment
+Input:
+Enter number: -10
+
+Output:
+Negative number not allowed
+
+Explanation:
+Throw keyword manually throws an exception when certain conditions are not met. 
+When user enters negative number (-10), throw statement explicitly throws ArithmeticException. 
+This allows explicit error handling for invalid conditions detected by application.*/
+
+==============================================================
+/*Question 13: Write a Java program to use throws keyword.
+
+Create a method that performs division and declares exceptions using throws keyword. Handle it in the main method.
+Asked In Practice Assignment
+Input:
+Enter number1: 25
+Enter number2: 0
+
+Output:
+Exception handled in main method
+
+Explanation:
+Throws keyword in method signature declares that method may throw exceptions. 
+When called method throws exception due to division by zero, calling method (main) catches and handles it. 
+This defers exception handling to calling method.  */
+
+==============================================================
+
+Question 14: Write a Java program to rethrow an exception.
+
+Catch exceptions in one method and rethrow it to the calling method.
+Asked In Practice Assignment
+Input:
+Enter number1: 10
+Enter number2: 0
+
+Output:
+Exception rethrown and handled
+
+Explanation:
+Rethrowing allows one method to catch exception, perform cleanup, then pass it to caller for further handling.
+ When method catches ArithmeticException and rethrows it, main method catches the
+ rethrown exception and displays appropriate message.
+
+====================================================================
+Question 15: Write a Java program to handle exceptions while reading array elements.
+
+Accept array size and elements. Handle exceptions if the user enters invalid datatype.
+Asked In Practice Assignment
+Input:
+Enter size: 3
+Enter elements: 10 A 30
+
+Output:
+Invalid input for array element
+
+Explanation:
+When reading array elements, NumberFormatException or InputMismatchException can occur 
+if user enters non-numeric data. When user enters "A" instead of number, exception is caught 
+and message informs about invalid input type expected.
+
+=================================================================
+Question 16: Write a Java program to handle multiple exceptions in a single catch.
+
+Use Java multi catch feature to handle ArithmeticException and NumberFormatException.
+Asked In Practice Assignment
+Input:
+Enter number: XYZ
+
+Output:
+Exception handled using multi catch
+
+Explanation:
+Multi-catch feature (Java 7+) allows catching multiple exception types in single catch block using pipe (|) operator.
+ Single catch block handles both ArithmeticException and NumberFormatException. 
+ This reduces code duplication when same handling logic applies to multiple exceptions.
+================================================================
+
+
 
