@@ -1,0 +1,177 @@
+path : //FileWriter fw=new FileWriter("C:\\Users\\anike\\Desktop\\ClassAssignments\\file handling\\Files\\student.txt");
+path :C:\Users\anike\Desktop\ClassAssignments\file handling\Files\test.txt
+Question 1: Write a Java program to create a file student.txt and store student name and marks into it.
+Asked In Practice Assignment
+Input:
+Enter student name: Rahul
+Enter marks: 78
+
+Output:
+File created successfully.
+Data written successfully.
+
+Explanation:
+Create file using FileWriter class with filename student.txt.
+ Accept student name and marks from user using Scanner. 
+ Write name and marks to file using write() method separated by space. 
+ Close FileWriter properly using close() method to save data. 
+ FileWriter automatically creates new file if not exists and overwrites if already exists. 
+ Proper file closure ensures no data loss.
+=========================================================================
+Question 2: Write a Java program to read data from student.txt and display it.
+Asked In Practice Assignment
+Input:
+File exists with content:
+Rahul 78
+
+Output:
+Student Data:
+Rahul 78
+
+Explanation:
+Open student.txt using FileReader and wrap with BufferedReader for efficient reading.
+Use readLine() method to read complete line from file. Parse the line to extract student name and marks.
+Display extracted data in formatted output. Handle FileNotFoundException if file does not exist.
+Close BufferedReader after reading completes to free system resources.
+===============================================================
+Question 3: Write a Java program to count total characters in a file.
+Asked In Practice Assignment
+Input:
+File content:
+Java Programming
+
+Output:
+Total characters = 17
+
+Explanation:
+Open file using FileReader to read character by character. Initialize counter to zero.
+Use read() method in loop to read each character including spaces.
+Increment counter for every character read. When read() returns -1, file end is reached.
+Count includes all characters: letters, digits, spaces, and special characters. Display final count.
+===================================================================
+Question 5: Write a Java program to count total lines in a file.
+Asked In Practice Assignment
+Input:
+File content:
+Java
+Python
+C++
+
+Output:
+Total lines = 3
+
+Explanation:
+Use BufferedReader to read file. Initialize line counter to zero. 
+Loop continuously using readLine() method to read each line. Increment counter for each non-null line read. 
+When readLine() returns null, end of file reached, stop loop. Display total line count. 
+Each line terminated by newline character is counted as one line.
+=======================================================================
+Question 6: Write a Java program to append data into an existing file.
+Asked In Practice Assignment
+Input:
+Existing file contains:
+Rahul 78
+New data to append:
+Amit 85
+
+Output:
+Data appended successfully.
+
+Explanation:
+Create FileWriter with filename and append parameter set to true.
+FileWriter(filename, true) opens file in append mode. 
+When append is true, new data adds at file end without overwriting existing content. 
+When false (default), file content is overwritten. Write new data using write() method. 
+Close FileWriter to save appended data. Previous content is preserved.
+=====================================================
+Question 7: Write a Java program to check whether file exists or not.
+Asked In Practice Assignment
+Input:
+Input filename:
+student.txt
+
+Output:
+File exists
+OR
+File does not exist
+
+Explanation:
+Create File object with filename as parameter. Use exists() method which returns boolean value.
+Returns true if file exists at specified path, false if file does not exist.
+Also can use isFile() method to verify if path refers to actual file.
+Use if-else statement to display appropriate message based on existence check result.
+===================================================================================
+/*Question 8: Write a Java program to display file size.
+Asked In Practice Assignment
+Input:
+Input filename:
+student.txt
+
+Output:
+File size = 120 bytes
+
+Explanation:
+Create File object with filename. Use length() method which returns file size in bytes as long value. 
+Check if file exists before calling length() using exists() method. For larger files, 
+convert bytes to KB by dividing by 1024, to MB by dividing by 1024*1024.
+ If file not found, length() returns -1 or throws exception. 
+ Display file size with appropriate unit.*/
+==========================================================================
+Question 9: Write a Java program to delete a file.
+Asked In Practice Assignment
+Input:
+Input filename:
+student.txt
+
+Output:
+File deleted successfully
+OR
+File not found or deletion failed
+
+Explanation:
+Create File object with filename to delete. Check if file exists using exists() method. 
+If exists, call delete() method which returns boolean. Returns true if deletion successful, false if deletion fails. 
+After successful deletion, file no longer exists and cannot be recovered. 
+Display appropriate success or failure message to user. 
+Verify deletion with exists() method.
+============================================================
+Question 10: Write a Java program to display file path.
+Asked In Practice Assignment
+Input:
+Input filename:
+student.txt
+
+Output:
+File path: C:\Users\Java\student.txt
+
+Explanation:
+Create File object with filename. Use getAbsolutePath() method to get complete path from root directory.
+getPath() returns path as specified in File constructor. 
+getCanonicalPath() returns simplified absolute path removing redundant components. 
+Display file location showing where file is stored in system. 
+Useful for verification and debugging file operations in application.
+========================================================================
+Question 11: Write a Java program to store 5 student records into file.
+Asked In Practice Assignment
+Input:
+Input:
+Rahul 78
+Amit 85
+Neha 90
+Pooja 67
+Ravi 88
+
+Output:
+Records stored successfully.
+
+Explanation:
+Create FileWriter to open file in write mode. Use loop to iterate exactly 5 times for storing 5 records. 
+For each iteration, read student name and marks from user input or predefined data. 
+Write each record to file with name and marks separated by space. 
+Add newline character after each record for proper formatting. 
+Close FileWriter after storing all 5 records to save file properly.
+========================================================================
+
+
+
+
