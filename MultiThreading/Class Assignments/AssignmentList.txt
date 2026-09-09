@@ -1,0 +1,211 @@
+Question 1: Write a Java program to create a thread using Thread class and display numbers from 1 to 10.
+
+Create a class that extends Thread. Override the run() method and print numbers from 1 to the given limit. 
+Start the thread from the main method.
+Asked In Practice Assignment
+Input:
+Enter limit: 10
+
+Output:
+Thread started
+1 2 3 4 5 6 7 8 9 10
+Thread finished
+
+Explanation:
+Creating threads using Thread class involves extending Thread and overriding run() method. 
+The run() method contains the code to execute in thread. Call start() method to begin thread execution, 
+not run() directly. Calling start() initializes thread state and calls run() internally,
+ensuring proper thread execution.
+===========================================================
+Question 2: Write a Java program to create a thread using Runnable interface and display even numbers.
+
+Create a class that implements Runnable interface. Print even numbers between given ranges using run() method.
+Asked In Practice Assignment
+Input:
+Enter limit: 10
+
+Output:
+Even numbers are:
+2 4 6 8 10
+
+Explanation:
+Runnable interface is preferred way to create threads as it avoids single inheritance limitation. 
+Implement Runnable, override run() method, and pass instance to Thread constructor. 
+This allows class to extend other classes while implementing Runnable. 
+Provides better design and flexibility compared to extending Thread class directly.
+================================================================
+Question 3: Write a Java program to create two threads where one prints numbers and another prints alphabets.
+
+Create two separate threads. The first thread prints numbers from 1–5 and 
+the second thread prints characters from A–E.
+Asked In Practice Assignment
+Input:
+No input required
+
+Output:
+Numbers Thread: 1 2 3 4 5
+Alphabet Thread: A B C D E
+
+Explanation:
+Multiple threads execute concurrently, allowing parallel execution of different tasks. 
+Create separate Runnable implementations for each task and start multiple Thread objects. 
+Both threads execute independently and may interleave their output due to scheduling. 
+Demonstrates concurrent execution of independent operations.
+======================================================
+Question 4: Write a Java program to demonstrate thread sleep() method.
+
+Create a thread that prints numbers from 1–5 with 1 second delay between each number using sleep() method.
+Asked In Practice Assignment
+Input:
+No input required
+
+Output:
+1
+(wait 1 sec)
+2
+(wait 1 sec)
+3
+(wait 1 sec)
+4
+(wait 1 sec)
+5
+
+Explanation:
+Thread.sleep() pauses current thread execution for specified milliseconds. 
+Wrap in try-catch to handle InterruptedException. Sleep does not release locks held by thread. 
+After sleep duration expires, thread resumes execution. Useful for controlled delays and timing in applications.
+=================================================================
+Question 5: Write a Java program to demonstrate getName() and setName() methods of Thread.
+
+Create a thread and change its name using setName(). Display the thread name using getName().
+Asked In Practice Assignment
+Input:
+Enter thread name: WorkerThread
+
+Output:
+Thread name is: WorkerThread
+
+Explanation:
+Every thread has default name like "Thread-0", "Thread-1". 
+Use setName() to assign custom name for identification. Use getName() to retrieve current thread name. 
+Custom names help in debugging and monitoring threads. 
+Useful for logging and tracking thread behavior in applications.
+==============================================================
+Question 6: Write a Java program to demonstrate the currentThread() method.
+
+Display the currently executing thread name using Thread.currentThread() method.
+Asked In Practice Assignment
+Input:
+No input required
+
+Output:
+Current thread is: main
+
+Explanation:
+Thread.currentThread() returns reference to currently executing thread. 
+Call getName() on returned thread object to get its name. Main method always executes in "main" thread. 
+Useful for determining which thread is executing current code. Helps in thread-aware programming and debugging.
+===================================================================
+Question 7: Write a Java program to create multiple threads and display their priorities.
+
+Create three threads and assign different priorities using setPriority(). Display their priorities.
+Asked In Practice Assignment
+Input:
+No input required
+
+Output:
+Thread1 Priority: 3
+Thread2 Priority: 6
+Thread3 Priority: 9
+
+Explanation:
+Thread priorities range from 1 (MIN_PRIORITY) to 10 (MAX_PRIORITY), default is 5 (NORM_PRIORITY). 
+Higher priority threads are favored for execution. Set priority using setPriority() before starting thread. 
+Get priority using getPriority(). Priority affects scheduler behavior but does not guarantee execution order.
+================================================================
+Question 8: Write a Java program to check whether a thread is alive or not.
+
+Create a thread and check thread status using isAlive() before and after execution.
+Asked In Practice Assignment
+Input:
+No input required
+
+Output:
+Thread alive before start: false
+Thread alive after start: true
+Thread alive after execution: false
+
+Explanation:
+isAlive() returns true if thread has started and not yet terminated. Before calling start(), 
+thread is not alive. After calling start() and thread enters run() method, it becomes alive. 
+After run() method completes and thread terminates, isAlive() returns false. 
+Useful for checking thread execution status.
+=====================================================================
+Question 9: Write a Java program to demonstrate join() method.
+
+Create two threads. The first thread prints numbers and the second thread waits until the first thread completes using join().
+Asked In Practice Assignment
+Input:
+No input required
+
+Output:
+Thread1 running
+Thread1 completed
+Thread2 started after Thread1
+
+Explanation:
+join() method causes calling thread to wait until specified thread completes execution. 
+In example, main thread calls thread1.join(), so main waits for thread1 to finish before starting thread2. 
+Useful for ensuring sequential execution of dependent tasks among threads.
+=================================================================================
+/*Question 10: Write a Java program to create a thread that prints a multiplication table.
+
+Create a thread that accepts a number and prints its multiplication table.
+Asked In Practice Assignment
+Input:
+Enter number: 5
+
+Output:
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+
+Explanation:
+Thread can perform calculations and display results. Create thread to accept number 
+and iterate from 1 to 10 to print multiplication table. 
+Demonstrates thread performing computational task independently.
+ Thread execution allows other operations to proceed while calculation runs.   */
+=============================================================================
+/*Question 11: Write a Java program where two threads print odd and even numbers separately.
+
+Create two threads. One prints odd numbers and another prints even numbers from 1 to N.
+Asked In Practice Assignment
+Input:
+Enter limit: 10
+
+Output:
+Odd Thread: 1 3 5 7 9
+Even Thread: 2 4 6 8 10
+
+Explanation:
+Two separate threads execute independently to print different number ranges. 
+First thread checks i%2!=0 for odd, second checks i%2==0 for even. 
+Threads run concurrently, allowing parallel number processing. 
+Output order may vary due to thread scheduling, but both complete independent tasks.   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
