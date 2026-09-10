@@ -1,0 +1,601 @@
+Question 1: Select all employees from city 'Pune'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Output of table look like
+
+| id | name | salary | email | contact | address | city |
+| --- | ------ | ------- | ---------------- | ------------- | ---------------- | ----- |
+| 1 | Rahul | 60000 | rahul@email.com | 9876543210 | 123 Street, Pune | Pune |
+| 5 | Ramesh | 80000 | ramesh@email.com | 9123456780 | 456 Avenue, Pune | Pune |
+
+
+=================================================================
+Question 2: Select employees with salary greater than 50000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+This requirement is about filtering employees based on their salary.
+
+Each employee has a salary value.
+
+The condition checks whether the salary is strictly greater than 50000.
+
+Only those employees who earn more than 50000 are included.
+
+Employees with salary equal to or less than 50000 are excluded.
+======================================================
+Question 3: Select employees whose name is 'Rahul'
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Explanation
+
+This requirement focuses on filtering records based on an exact match of the employee’s name.
+
+Each row has a name column.
+
+The condition checks whether the name is exactly equal to 'Rahul'.
+
+Only those rows where the name matches 'Rahul' exactly are selected.
+
+All other names (like Amit, Sneha, etc.) are ignored.
+==============================================================
+Question 4: Select employees whose salary is less than 30000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+This requirement is about filtering employees based on a lower salary condition.
+
+Each employee has a salary value.
+
+The condition checks whether the salary is strictly less than 30000.
+
+Only those employees earning below 30000 are included.
+
+Employees earning 30000 or more are excluded.
+
+lightbulb Take a Help
+==================================================================
+Question 5: Select employees from city 'Mumbai'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+This requirement is about filtering employees based on their city.
+
+Each record in the table has a city column.
+
+The condition checks whether the city value is exactly 'Mumbai'.
+
+Only those employees who belong to Mumbai are included.
+
+Employees from other cities like Pune, Delhi, Chennai, etc., are excluded.
+========================================================
+Question 6: Select employees with salary equal to 40000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+This requirement focuses on finding employees whose salary exactly matches a specific value (40000).
+
+Each employee has a salary field.
+
+The condition checks whether the salary is exactly 40000.
+
+Only those employees whose salary is precisely 40000 are included.
+
+Employees with salary less than or greater than 40000 are excluded.
+================================================================================
+Question 7: Select employees whose contact is NULL.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Explanation
+
+This requirement is about finding employees who do not have a contact number recorded.
+
+Each employee has a contact column.
+
+NULL represents missing or unknown data in databases.
+
+The condition checks whether the contact field is empty or not provided.
+
+Only rows with no contact information are included.
+
+Employees with any contact number are excluded.
+==============================================================================
+Question 8: Select employees whose email is NOT NULL.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Explanation
+
+This requirement is about finding employees who have an email address recorded.
+
+Each employee has an email column.
+
+NOT NULL means the column has a value (it is not missing).
+
+The condition checks each row and includes only those where the email field contains an email address.
+
+Employees without an email (NULL) are excluded.
+==================================================================================
+Question 9: Select employees whose salary is not equal to 25000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Explanation
+
+This requirement is about filtering employees whose salary is different from a specific value.
+
+Each employee has a salary column.
+
+The condition checks whether the salary is not equal to 25000.
+
+Only employees earning any amount other than 25000 are included.
+
+Employees with salary exactly 25000 are excluded.
+=========================================================================
+Question 10: Select employees from city 'Delhi' with salary > 60000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Explanation
+This requirement combines two conditions: city and salary.
+Each employee has a city and salary column.
+Condition 1: city must be exactly 'Delhi'.
+Condition 2: salary must be greater than 60000.
+Only employees who meet both conditions simultaneously are included.
+Employees who satisfy only one condition are excluded.
+==================================================================
+Question 11: Select employees whose name is not 'Amit'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Explanation
+This requirement focuses on excluding employees with a specific name.
+Each employee has a name column.
+The condition checks whether the name is not equal to 'Amit'.
+Only employees whose name is different from 'Amit' are included.
+Employees named Amit are excluded from the result.
+==========================================================================
+Question 12: Select employees with salary <= 45000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Explanation
+
+This requirement is about filtering employees whose salary is less than or equal to a specific amount.
+
+Each employee has a salary column.
+
+The condition checks whether the salary is less than or exactly 45000.
+
+Employees earning 45000 or less are included.
+
+Employees earning more than 45000 are excluded.
+=====================================================================
+Question 13: Select employees with salary >= 70000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Explanation
+
+This requirement is about filtering employees whose salary is greater than or equal to a certain amount.
+
+Each employee has a salary column.
+
+The condition checks whether the salary is 70000 or higher.
+
+Employees earning 70000 or more are included.
+
+Employees earning less than 70000 are excluded
+================================================================
+Question 14: Select employees from city 'Chennai'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Explanation
+
+This requirement is about filtering employees based on their city.
+
+Each employee has a city column.
+
+The condition checks whether the city value is exactly 'Chennai'.
+
+Only employees belonging to Chennai are included.
+
+Employees from other cities like Pune, Mumbai, Delhi, etc., are excluded.
+=====================================================================
+Question 15: Select employees whose address contains 'Street'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Explanation
+
+This requirement is about filtering employees based on a partial match in the address.
+
+Each employee has an address column.
+
+The condition checks whether the address includes the word 'Street' anywhere.
+
+Employees whose address does not contain 'Street' are excluded.
+
+This is useful when you want to search for addresses with a specific keyword.
+
+mysql> select * from employees where address like "%Street%";
++------+-------+--------+-----------------+------------+-----------------+------+
+| id   | name  | salary | email           | contact    | address         | city |
++------+-------+--------+-----------------+------------+-----------------+------+
+|    1 | Rahul |  60000 | rahuk@gmail.com | 9876543210 | 123 Street,Pune | Pune |
++------+-------+--------+-----------------+------------+-----------------+------+
+1 row in set (0.38 sec)
+
+mysql>
+==============================================================================
+Question 16: Select employees with id greater than 10.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Every employee has a unique ID. When you apply the condition “ID greater than 10,” you are telling the system to look at all employee records and keep only those where the ID value is more than 10.
+
+This means:
+
+Employees with ID 10 or less are excluded
+
+Only employees with ID 11, 12, 13, and so on are included
+===================================================================
+Question 17: Select employees with id less than 5.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee has a unique ID. When you apply the condition “ID less than 5,” the system checks all records and keeps only those where the ID is smaller than 5.
+
+This means:
+
+Employees with ID 5 or greater are excluded
+
+Only employees with ID 1, 2, 3, 4 (if present) are included
+======================================================================
+Question 18: Select employees with salary not equal to 0.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee has a salary value. When you apply the condition “salary not equal to 0,” the system checks all records and keeps only those where the salary is any value other than 0.
+
+This means:
+
+Employees with salary 0 are excluded (for example, unpaid interns or inactive records)
+
+Employees with any positive or negative salary (if applicable) are includedQuestion 19: Select employees whose city is not 'Pune'
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record includes a city. When you apply the condition “city is not Pune,” the system checks all records and keeps only those employees whose city is different from Pune.
+
+This means:
+
+Employees whose city is Pune are excluded
+
+Employees from any other city (like Mumbai, Delhi, Bangalore, etc.) are included
+===========================================================================
+
+=============================================================================
+Question 19: Select employees whose city is not 'Pune'
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record includes a city. When you apply the condition “city is not Pune,” the system checks all records and keeps only those employees whose city is different from Pune.
+
+This means:
+
+Employees whose city is Pune are excluded
+
+Employees from any other city (like Mumbai, Delhi, Bangalore, etc.) are included
+mysql> select * from employees where city<>"Pune";
++------+-------+--------+-----------------+------------+---------------------+--------+
+| id   | name  | salary | email           | contact    | address             | city   |
++------+-------+--------+-----------------+------------+---------------------+--------+
+|    8 | John  |  45000 | John@gmail.com  | 123448725  | 1245 Chouk,Mumbai   | Mumbai |
+|    9 | Amit  |  45000 | Amit@gmail.com  | NULL       | 789 Chouk,Bihar     | Bihar  |
+|   10 | Neha  |  45000 | Neha@gmail.com  | 1446589725 | 124 New Delhi,Delhi | Delhi  |
+|   11 | Priya |  40000 | Pirya@gmail.com | 123459725  | 555 New Delhi,Delhi | Delhi  |
+|   11 | Maya  |  45000 | maya@gmail.com  | 14678546   | 184 New Delhi,Delhi | Delhi  |
++------+-------+--------+-----------------+------------+---------------------+--------+
+5 rows in set (0.00 sec)
+
+mysql>
+===========================================================================
+Question 20: Select employees whose contact starts with '9'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee has a contact number. When you apply the condition “starts with 9,” the system checks all records and keeps only those employees whose contact number begins with the digit 9.
+
+This means:
+
+Contact numbers starting with 9 are included
+
+Contact numbers starting with any other digit (like 7, 8, 6, etc.) are excluded
+
+mysql> select * from employees where contact like "9%";
++------+--------+--------+------------------+------------+------------------+------+
+| id   | name   | salary | email            | contact    | address          | city |
++------+--------+--------+------------------+------------+------------------+------+
+|    1 | Rahul  |  60000 | rahuk@gmail.com  | 9876543210 | 123 Street,Pune  | Pune |
+|    5 | Ramesh |  80000 | ramesh@gmail.com | 9123456780 | 456 Avenue, Pune | Pune |
+|    6 | Aniket |  40000 | aniket@gmail.com | 9912346780 | 789 View, Pune   | Pune |
++------+--------+--------+------------------+------------+------------------+------+
+3 rows in set (0.00 sec)
+
+mysql>
+===================================================================
+Question 21: Employees from Pune AND salary > 40000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record contains details like city and salary. Here, you are filtering the data with two requirements:
+
+The employee must be from Pune
+
+The employee’s salary must be greater than 40,000
+
+Both conditions must be satisfied together. If even one condition is not met, the employee will not be included.
+====================================================================
+Question 22: Employees from Mumbai OR Delhi.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee has a city associated with them. When you apply the condition “Mumbai OR Delhi,” the system checks all records and includes employees who belong to either Mumbai or Delhi.
+
+This means:
+
+Employees from Mumbai are included
+
+Employees from Delhi are included
+
+Employees from any other city are excluded
+
+Only one of the conditions needs to be true for a record to be selected.
+
+
+==================================================
+Question 23: Employees with salary > 30000 AND < 70000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee has a salary value. When you apply the condition “greater than 30,000 AND less than 70,000,” the system checks all records and keeps only those employees whose salary falls between these two values.
+
+This means:
+
+Salaries above 30,000 are included
+
+Salaries below 70,000 are included
+
+Salaries 30,000 or less and 70,000 or more are excluded
+
+Important: BETWEEN includes both values
+BETWEEN 30000 AND 70000
+
+means:
+
+salary >= 30000
+AND
+salary <= 70000
+
+If you want salary strictly greater than 30000 AND strictly less than 70000:
+
+SELECT * FROM employees
+WHERE salary > 30000 AND salary < 70000;
+===============================================================
+Question 24: Employees NOT from Pune.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee has a city value. When you apply the condition “NOT from Pune,” the system checks all records and keeps only those employees whose city is different from Pune.
+
+This means:
+
+Employees from Pune are excluded
+
+Employees from all other cities are included
+====================================================
+Question 25: Employees from Pune AND name 'Rahul'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city and a name. Here, you filter the records with these requirements:
+
+The employee must be from Pune
+
+The employee’s name must be Rahul
+
+Both conditions must be satisfied simultaneously. If even one condition is not met, the employee is excluded.
+=========================================================================
+Question 26: Employees from Delhi OR salary > 80000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee has a city and a salary. With this condition:
+
+Employees from Delhi are included, regardless of salary
+
+Employees with salary greater than 80,000 are included, regardless of city
+
+An employee will appear in the result if at least one of these conditions is true.
+=================================================================================================
+Question 27: Employees NOT having salary < 20000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee has a salary value. The condition “NOT salary < 20,000” works as follows:
+
+The original condition is “salary < 20,000,” which would select employees earning less than 20,000
+
+Applying NOT reverses it, so it selects employees whose salary is not less than 20,000
+
+This effectively means employees with salary greater than or equal to 20,000
+===============================================================
+Question 28: Employees from Chennai AND salary > 50000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record contains a city and a salary. Here, the two requirements are:
+
+The employee must be from Chennai
+
+The employee’s salary must be greater than 50,000
+
+Both conditions must be satisfied at the same time. If even one condition is not met, the employee is excluded.
+========================================================================
+Question 29: Employees from Mumbai OR salary < 25000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city and a salary. The conditions work like this:
+
+Employees from Mumbai are included, regardless of salary
+
+Employees with salary less than 25,000 are included, regardless of city
+
+An employee will appear in the result if at least one of these conditions is true.
+==========================================================
+Question 30: Employees NOT in city 'Delhi'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city field. When you apply the condition “NOT in city Delhi”:
+
+Employees from Delhi are excluded
+
+Employees from all other cities (like Mumbai, Pune, Chennai, etc.) are included
+
+This ensures that only employees who do not belong to Delhi appear in the results.
+
+==============================================================================================================================
+
+
+
+
