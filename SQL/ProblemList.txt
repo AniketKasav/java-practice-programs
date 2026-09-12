@@ -595,6 +595,961 @@ Employees from all other cities (like Mumbai, Pune, Chennai, etc.) are included
 This ensures that only employees who do not belong to Delhi appear in the results.
 
 ==============================================================================================================================
+Question 31: Employees from Pune AND salary BETWEEN 30000 AND 60000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city and a salary. The conditions are:
+
+The employee must be from Pune
+
+The employee’s salary must be within the range 30,000 to 60,000 (inclusive of both ends)
+
+Both conditions must be satisfied at the same time. If either condition is not met, the employee is excluded.
+=======================================================================
+Question 32: Employees from Delhi OR Chennai AND salary > 40000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city and a salary. The condition combines OR and AND:
+
+Salary > 40,000 must always be true (because AND has higher precedence than OR if no brackets are specified)
+
+Employees from Delhi or Chennai are included only if their salary > 40,000
+
+In other words, the system first checks salary > 40,000, then selects employees whose city is Delhi or Chennai among those.
+
+Employees from other cities, even with salary > 40,000, are excluded if proper parentheses are used around (Delhi OR Chennai).
+
+Employees from Delhi or Chennai with salary ? 40,000 are excluded.
+====================================================================================
+Question 33: Employees NOT having email ending with '@gmail.com'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has an email address. The condition “NOT ending with @gmail.com” works like this:
+
+Normally, “ending with @gmail.com” would select all employees using Gmail.
+
+Applying NOT reverses it, so only employees whose emails do not end with @gmail.com are included.
+
+This includes:
+
+Employees using company emails (e.g., @company.com)
+
+Employees using other email providers (e.g., @yahoo.com, @outlook.com)
+
+Employees without any email
+
+Employees with emails ending in @gmail.com are excluded.
+==========================================================================
+Question 34: Employees from Mumbai AND NOT salary < 30000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city and a salary. The condition works like this:
+
+Employee must be from Mumbai
+
+Employee’s salary must not be less than 30,000
+
+Breaking it down:
+
+“NOT salary < 30,000” means the salary is greater than or equal to 30,000
+
+Both conditions must be satisfied at the same time due to the AND
+
+Employees who do not satisfy either condition are excluded.
+=========================================================================
+Question 35: Employees from Pune OR salary > 90000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city and a salary. The condition works like this:
+
+Employees from Pune are included, regardless of salary
+
+Employees with salary greater than 90,000 are included, regardless of city
+
+An employee will appear in the result if at least one of these conditions is true.
+===============================================================================================
+Question 36: Employees NOT having name 'Suresh'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a name field. The condition “NOT name = Suresh” works like this:
+
+Normally, “name = Suresh” would select all employees named Suresh.
+
+Applying NOT reverses it, so only employees whose name is not Suresh are included.
+
+This ensures that all employees except Suresh appear in the results.
+
+lightbulb Take a Help
+===================================================
+Question 38: Employees from Chennai OR salary BETWEEN 20000 AND 40000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city and a salary. The condition works like this:
+
+Employees from Chennai are included, regardless of their salary
+
+Employees with salary between 20,000 and 40,000 are included, regardless of city
+
+An employee will appear in the result if at least one of these conditions is true.
+=================================================================================================
+Question 39: Employees NOT from Mumbai AND salary > 35000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city and a salary. The two conditions are:
+
+Employee must not be from Mumbai
+
+Employee’s salary must be greater than 35,000
+
+Both conditions must be satisfied at the same time. If either condition is not met, the employee is excluded.
+
+This ensures you get employees who:
+
+Are from any city except Mumbai
+
+AND earn more than 35,000
+============================================================================
+Question 40: Employees from Pune OR NOT salary > 80000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city and a salary. The condition works like this:
+
+Employees from Pune are included, regardless of salary
+
+Employees with salary NOT greater than 80,000 are included, regardless of city
+
+Breaking it down:
+
+“NOT salary > 80,000” means salary is 80,000 or less
+
+The OR condition means an employee will be included if either condition is true
+
+So, employees will appear in the result if:
+
+They are from Pune, or
+
+Their salary is ? 80,000
+
+Only employees who are not from Pune and earn more than 80,000 are excluded.
+=======================================================================================
+Question 41: Names starting with 'A'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a name field. The condition “starts with A” works like this:
+
+The system checks the first letter of the name for each employee
+
+Only employees whose name begins with the letter “A” are included
+
+All other names are excluded
+
+This is useful for quickly grouping or searching employees by the first letter of their names.
+====================================================================================================
+Question 42: Names ending with 'n'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a name field. The condition “ends with n” works like this:
+
+The system checks the last letter of the name for each employee
+
+Only employees whose name ends with the letter “n” are included
+
+All other names are excluded
+
+This is useful for filtering names by a specific ending pattern.
+
+lightbulb Take a Help
+===================================================
+Question 43: Names containing 'ra'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a name field. The condition “contains ‘ra’” works like this:
+
+The system checks all parts of the name for the sequence of letters “ra”
+
+Only employees whose name includes “ra” anywhere are included
+
+Names that do not contain “ra” are excluded
+
+This is useful for searching for names with specific sequences of letters.
+====================================================================================
+Question 44: Emails ending with '@gmail.com'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has an email address. The condition “ends with @gmail.com” works like this:
+
+The system checks the last part of the email for each employee
+
+Only employees whose email ends exactly with @gmail.com are included
+
+Emails ending with other domains (e.g., @yahoo.com, @company.com) are excluded
+=====================================================
+Question 45: Emails containing 'yahoo'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has an email address. The condition “contains yahoo” works like this:
+
+The system checks the entire email address for the sequence of letters “yahoo”
+
+Only employees whose email includes “yahoo” anywhere are included
+
+Emails that do not contain “yahoo” are excluded
+========================================================
+Question 46: Contact starting with '98'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a contact number. The condition “starts with 98” works like this:
+
+The system checks the first two digits of the contact number for each employee
+
+Only employees whose contact begins with 98 are included
+
+Contact numbers starting with any other digits are excluded
+
+lightbulb Take a Help
+====================================
+Question 47: Address containing 'Road'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has an address field. The condition “contains Road” works like this:
+
+The system checks the entire address for the word “Road”
+
+Only employees whose address includes “Road” anywhere are included
+
+Addresses that do not contain “Road” are excluded
+
+
+===========================================================================
+Question 48: Names with exactly 5 characters.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a name field. The condition “names with exactly 5 characters” works like this:
+
+The system counts the number of characters in each name
+
+Only employees whose names have exactly 5 letters are included
+
+Names with fewer or more than 5 letters are excluded
+==============================================================
+Question 49: Names starting with 'S' and ending with 'h'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a name field. The conditions are:
+
+The name must start with the letter “S”
+
+The name must end with the letter “h”
+===============================================================
+Question 50: Emails starting with 'info'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has an email address. The condition “starts with info” works like this:
+
+The system checks the first part of the email for each employee
+
+Only employees whose email begins exactly with info are included
+
+Emails starting with other characters or prefixes are excluded
+=========================================================================
+Question 51: Names NOT starting with 'R'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a name field. The condition “NOT starting with R” works like this:
+
+Normally, “starting with R” would select all employees whose names begin with R.
+
+Applying NOT reverses this, so only employees whose names do not start with R are included.
+
+Names starting with R are excluded.
+=========================================================
+Question 52: Names containing 'a' but not ending with 'a'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a name field. The two conditions are:
+
+The name must contain the letter “a” anywhere.
+
+The name must not end with “a”.
+===========================================================
+Question 53: Address starting with 'Flat'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has an address field. The condition “starts with Flat” works like this:
+
+The system checks the first part of the address for each employee
+
+Only employees whose address begins exactly with Flat are included
+
+Addresses starting with other words are excluded
+
+lightbulb Take a Help
+==============================================
+Question 54: Emails containing '.com'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has an email address. The condition “contains .com” works like this:
+
+The system checks the entire email for the sequence “.com”
+
+Only employees whose email includes .com anywhere are included
+
+Emails without .com (e.g., .org, .net) are excluded
+================================================================
+Question 55: Contact ending with '0'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a contact number. The condition “ends with 0” works like this:
+
+The system checks the last digit of the contact number for each employee
+
+Only employees whose contact ends with 0 are included
+
+Contact numbers ending with any other digit are excluded
+=====================================================================
+Question 56: Employees from cities Pune, Mumbai, Delhi.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city field. The condition works like this:
+
+The system checks the city of each employee
+
+Only employees whose city is either Pune, Mumbai, or Delhi are included
+
+Employees from other cities are excluded
+===============================================================
+Question 57: Employees with salary in (30000, 40000, 50000).
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a salary field. The condition works like this:
+
+The system checks the salary of each employee
+
+Only employees whose salary is exactly 30,000, 40,000, or 50,000 are included
+
+Employees with salaries other than these values are excluded
+=============================================================================
+Question 58: Employees whose name is in ('Amit','Rahul').
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a name field. The condition works like this:
+
+The system checks the name of each employee
+
+Only employees whose name is exactly “Amit” or “Rahul” are included
+
+Employees with any other names are excluded
+======================================================================
+Question 59: Employees from Chennai or Bangalore.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city field. The condition works like this:
+
+The system checks the city of each employee
+
+Employees whose city is either Chennai or Bangalore are included
+
+Employees from other cities are excluded
+===================================================================
+Question 60: Employees NOT in cities 'Pune','Delhi'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city field. The condition works like this:
+
+The system checks the city of each employee
+
+Employees whose city is neither Pune nor Delhi are included
+
+Employees from Pune or Delhi are excluded
+===================================================================
+Question 61: Employees with id in (1,2,3,4).
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has an ID field. The condition works like this:
+
+The system checks the ID of each employee
+
+Only employees whose ID is exactly 1, 2, 3, or 4 are included
+
+Employees with any other IDs are excluded
+===================================================================
+Question 62: Employees whose salary NOT IN (10000,20000).
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a salary field. The condition works like this:
+
+The system checks the salary of each employee
+
+Employees whose salary is neither 10,000 nor 20,000 are included
+
+Employees with a salary of 10,000 or 20,000 are excluded
+==================================================================
+Question 63: Employees whose name IN ('Suresh','Ramesh').
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a name field. The condition works like this:
+
+The system checks the name of each employee
+
+Only employees whose name is exactly “Suresh” or “Ramesh” are included
+
+Employees with any other names are excluded
+==================================================================
+Question 64: Employees from cities 'Hyderabad','Chennai'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city field. The condition works like this:
+
+The system checks the city of each employee
+
+Only employees whose city is exactly Hyderabad or Chennai are included
+
+Employees from other cities are excluded
+=============================================================================
+Question 65: Employees NOT IN salary range list (25000,35000).
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a salary field. The condition works like this:
+
+The system checks the salary of each employee
+
+Employees whose salary is neither 25,000 nor 35,000 are included
+
+Employees with a salary of 25,000 or 35,000 are excluded
+======================================================================
+Question 66: Salary between 20000 and 50000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a salary field. The condition works like this:
+
+The system checks the salary of each employee
+
+Only employees whose salary is greater than or equal to 20,000 and less than or equal to 50,000 are included
+=================================================================================
+Question 67: Id between 5 and 15.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has an ID field. The condition works like this:
+
+The system checks the ID of each employee
+
+Only employees whose ID is greater than or equal to 5 and less than or equal to 15 are included
+
+Employees with IDs less than 5 or greater than 15 are excluded
+===========================================================================
+Question 68: Salary NOT between 30000 and 60000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a salary field. The condition works like this:
+
+The system checks the salary of each employee
+
+Employees whose salary is less than 30,000 or greater than 60,000 are included
+
+Employees with salaries between 30,000 and 60,000 (inclusive) are excluded
+=================================================================================
+Question 69: Salary between 40000 and 80000 AND city Pune.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has salary and city fields. The conditions are:
+
+The salary must be between 40,000 and 80,000 (inclusive)
+
+The city must be Pune
+======================================================================
+Question 70: Id between 1 and 10 AND city Mumbai.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has ID and city fields. The conditions are:
+
+The ID must be between 1 and 10 (inclusive).
+
+The city must be Mumbai.
+==============================================================
+Question 71: Salary between 25000 and 45000 OR city Delhi.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has salary and city fields. The conditions are:
+
+The salary is between 25,000 and 45,000 (inclusive), OR
+
+The city is Delhi
+=====================================================
+Question 72: Salary NOT between 10000 and 20000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a salary field. The condition works like this:
+
+The system checks the salary of each employee.
+
+Employees whose salary is less than 10,000 or greater than 20,000 are included.
+
+Employees with salaries between 10,000 and 20,000 (inclusive) are excluded
+=====================================================================================
+Question 73: Salary between 50000 and 90000 AND name starts with 'A'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has salary and name fields. The conditions are:
+
+The salary must be between 50,000 and 90,000 (inclusive).
+
+The name must start with the letter “A”.
+======================================================================
+Question 74: Salary between 20000 and 70000 AND NOT city Chennai.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has salary and city fields. The conditions are:
+
+The salary must be between 20,000 and 70,000 (inclusive).
+
+The city must not be Chennai.
+==================================================================
+Question 75: Id NOT between 3 and 8.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has an ID field. The condition works like this:
+
+The system checks the ID of each employee.
+
+Employees whose ID is less than 3 or greater than 8 are included.
+
+Employees with IDs between 3 and 8 (inclusive) are excluded.
+=======================================================================
+Question 76: Count employees in each city.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city field. The operation works like this:
+
+Group all employees based on their city.
+
+Count the number of employees in each group.
+
+Return a list of cities with the corresponding employee count.
+====================================================================
+Question 77: Average salary per city.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has salary and city fields. The operation works like this:
+
+Group all employees based on their city.
+
+Calculate the average salary for each city group by adding all salaries in that city and dividing by the number of employees.
+
+Return a list of cities with the corresponding average salary.
+=============================================================================
+Question 78: Maximum salary in each city.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has salary and city fields. The operation works like this:
+
+Group all employees based on their city.
+
+For each city group, identify the highest salary among its employees.
+
+Return a list of cities with the corresponding maximum salary.
+===========================================================================
+Question 79: Minimum salary per city.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has salary and city fields. The operation works like this:
+
+Group all employees based on their city.
+
+For each city group, identify the lowest salary among its employees.
+
+Return a list of cities with the corresponding minimum salary.
+===============================================================================
+Question 80: Total salary per city.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has salary and city fields. The operation works like this:
+
+Group all employees based on their city.
+
+For each city group, calculate the sum of all salaries in that city.
+
+Return a list of cities with the corresponding total salary.
+=================================================================================
+Question 81: Count employees per city where salary > 30000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has salary and city fields. The operation works like this:
+
+Filter employees whose salary is greater than 30,000.
+
+Group the remaining employees based on their city.
+
+Count the number of employees in each city group.
+===========================================================================
+Question 82: Group employees by city and count emails.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has city and email fields. The operation works like this:
+
+Group all employees based on their city.
+
+For each city group, count the number of email entries (i.e., the number of employees in that city).
+
+Return a list of cities with the corresponding email count.
+=====================================================================
+Question 84: Group employees by city for names starting with 'A'.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has name and city fields. The operation works like this:
+
+Filter employees whose name starts with “A”.
+
+Group the remaining employees based on their city.
+
+Count or list employees in each city group, depending on the requirement.
+=================================================================================
+Question 85: Count employees per city excluding Pune.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city field. The operation works like this:
+
+Exclude employees whose city is Pune.
+
+Group the remaining employees based on their city.
+
+Count the number of employees in each city group.
+======================================================================
+Question 86: Cities having more than 5 employees.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has a city field. The operation works like this:
+
+Group employees by city.
+
+Count the number of employees in each city group.
+
+Filter the groups to include only cities where the employee count is greater than 5.
+==============================================================
+
 
 
 
