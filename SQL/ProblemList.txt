@@ -1549,8 +1549,300 @@ Count the number of employees in each city group.
 
 Filter the groups to include only cities where the employee count is greater than 5.
 ==============================================================
+Question 87: Cities with avg salary > 40000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has salary and city fields. The operation works like this:
+
+Group employees by city.
+
+Calculate the average salary for each city group.
+
+Filter cities where the average salary is greater than 40,000.
+=========================================================================
+Question 88: Cities where max salary > 80000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Description
+
+Each employee record has salary and city fields. The operation works like this:
+
+Group employees by city.
+
+Identify the maximum salary in each city group.
+
+Filter cities where the maximum salary is greater than 80,000.
+==============================================================================
+Question 89: Cities where total salary > 200000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Group data by city
+
+Imagine you have employee records, and each employee belongs to a city.
+
+First, all employees are grouped based on the city they work in.
+
+Calculate total salary per city
+
+For each city group, the salaries of all employees in that city are added together.
+
+This gives one total salary value per city.
+
+Filter cities based on condition
+
+After calculating totals, only those cities are selected where the total salary is greater than 200,000.
+===========================================================----------=====================
+Question 90: Cities having less than 3 employees.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Group employees by city
+
+All employee records are organized based on the city they belong to.
+
+Count employees in each city
+
+For every city, count how many employees are present.
+
+Apply condition (less than 3)
+
+Only those cities are selected where the employee count is less than 3.
+=========================================================================================
+Question 91: Cities where avg salary between 30000 and 60000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Group employees by city
+
+All employee records are organized based on their respective cities.
+
+Calculate average salary per city
+
+For each city, add all employee salaries and divide by the number of employees.
+
+This gives the average salary for that city.
+
+Apply the range condition
+
+Select only those cities where the average salary is:
+
+Greater than or equal to 30,000, and
+
+Less than or equal to 60,000
+=================================================================================
+Question 92: Cities where count > 2 AND avg salary > 50000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Group employees by city
+
+Organize all employee records based on their city.
+
+Calculate two values for each city
+
+Count of employees (how many employees are in the city)
+
+Average salary (total salary divided by number of employees)
+
+Apply both conditions together
+
+Select only those cities where:
+
+Employee count is greater than 2, and
+
+Average salary is greater than 50,000
+======================================================================
+Question 93: Cities having max salary < 70000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Group employees by city
+
+Organize all employees based on their city.
+
+Find maximum salary per city
+
+For each city, identify the highest salary among its employees.
+
+Apply the condition (< 70,000)
+
+Select only those cities where the maximum salary is less than 70,000.
+===================================================================================
+Question 94: Cities where min salary > 20000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Group employees by city
+
+Organize all employee records based on their city.
+
+Find minimum salary per city
+
+For each city, identify the lowest salary among its employees.
+
+Apply the condition (> 20,000)
+
+Select only those cities where the minimum salary is greater than 20,000.
+===================================================================================
+Question 95: Cities where total salary between 100000 and 300000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Group employees by city
+
+Organize all employee records based on their city.
+
+Calculate total salary per city
+
+Add up all employee salaries within each city.
+
+Apply the range condition
+
+Select only those cities where the total salary lies between 100,000 and 300,000
+============================================================================================
+Question 96: Cities having count NOT less than 4.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Group employees by city
+
+Organize all employee records based on their city.
+
+Count employees in each city
+
+For every city, calculate how many employees are there.
+
+Apply the condition (NOT less than 4)
+
+Select cities where the employee count is ? 4.
+======================================================================
+Question 97: Cities where avg salary NOT between 20000 and 40000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Group employees by city
+
+Organize all employee records based on their city.
+
+Calculate average salary per city
+
+For each city, compute the mean salary.
+
+Apply the NOT BETWEEN condition
+
+Exclude cities where average salary is between 20,000 and 40,000.
+
+Keep only those cities where the average is outside this range.
+==================================================================================
+Question 99: Cities where count > 3 OR avg salary > 60000.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Group employees by city
+
+Organize all employee records by city.
+
+Calculate two values for each city
+
+Count of employees
+
+Average salary
+
+Apply the OR condition
+
+Include cities where count > 3 or average salary > 60,000
+========================================================================
+Question 100: Cities having sum salary > 500000 AND count > 5.
+Asked In Just Practice Question
+Consider an employee table with the following fields:
+id, name, salary, email, contact, address, and city.
+If the table does not exist, create it.
+-------------------------------------------------------------------------------------------------------------
+
+Group employees by city
+
+Organize all employee records based on the city they belong to.
+
+Calculate two aggregate values for each city
+
+Total salary: sum of all salaries in the city
+
+Employee count: number of employees in the city
+
+Apply the AND condition
+
+Only include cities where:
+
+Total salary > 500,000 AND
+
+Employee count > 5
+=======================================================================
+Question 101: Perform Joins 30 Question on Institute Management Database
+Asked In Practice Assignment
+Consider we have following database table
+
+mysql> create table course(cid int(5) primary key auto_increment,cname varchar(200));
+
+mysql> create table student(sid int(5) primary key auto_increment,sname varchar(200));
+
+mysql> create table batch(bid int(5) primary key auto_increment,bname varchar(200),cid int(5),foreign key(cid) references course(cid));
+
+mysql> create table sbjoin(sid int(5),foreign key(sid) references student(sid),bid int(5),foreign key(bid) references batch(bid));
+
+mysql> create table csjoin(cid int(5),foreign key(cid) references course(cid),sid int(5),foreign key(sid) references student(sid));
+
+mysql> create table placement(pid int(5) primary key auto_increment,compname varchar(200),package int(5),sid int(5),foreign key(sid) references student(sid));
 
 
+Perform following queries on using above database
+
+Query1: List all students along with the batch they belong to.
+Hint: Helps practice INNER JOIN between student, sbjoin, and batch
+
+Query2: Display all batches and their respective course names.
+Hint: Practice joining batch with course
+====================================================================
 
 
 
