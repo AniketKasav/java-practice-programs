@@ -1843,6 +1843,470 @@ Hint: Helps practice INNER JOIN between student, sbjoin, and batch
 Query2: Display all batches and their respective course names.
 Hint: Practice joining batch with course
 ====================================================================
+Consider we have following database table
+
+mysql> create table course(cid int(5) primary key auto_increment,cname varchar(200));
+
+mysql> create table student(sid int(5) primary key auto_increment,sname varchar(200));
+
+mysql> create table batch(bid int(5) primary key auto_increment,bname varchar(200),cid int(5),foreign key(cid) references course(cid));
+
+mysql> create table sbjoin(sid int(5),foreign key(sid) references student(sid),bid int(5),foreign key(bid) references batch(bid));
+
+mysql> create table csjoin(cid int(5),foreign key(cid) references course(cid),sid int(5),foreign key(sid) references student(sid));
+
+mysql> create table placement(pid int(5) primary key auto_increment,compname varchar(200),package int(5),sid int(5),foreign key(sid) references student(sid));
+
+
+Perform following queries on using above database
+
+Query1: List all students along with the batch they belong to.
+Hint: Helps practice INNER JOIN between student, sbjoin, and batch
+
+Query2: Display all batches and their respective course names.
+Hint: Practice joining batch with course
+
+Query3: Show all students with their enrolled courses.
+Hint: Use csjoin to connect student and course
+ans :
+mysql> select s.sid,s.sname,c.cid,c.cname from student s inner join csjoin sc on s.sid=sc.sid inner join course c on sc.cid=c.cid;
++-----+---------+-----+-------------------+
+| sid | sname   | cid | cname             |
++-----+---------+-----+-------------------+
+|   1 | aniket  |   1 | java full stack   |
+|   6 | swapnil |   1 | java full stack   |
+|   2 | amit    |   1 | java full stack   |
+|   3 | sandip  |   2 | python full stack |
+|   5 | raj     |   2 | python full stack |
+|   4 | pravin  |   3 | data science      |
+|   4 | pravin  |   4 | aiml              |
++-----+---------+-----+-------------------+
+7 rows in set (0.00 sec)
+------------------------------------------------------------------------
+
+Query4: Get list of students who are placed along with their company name.
+Hint: Join student with placement
+ans:
+mysql> select s.sid,s.sname,p.compname from student s inner join placement p on s.sid=p.sid;
++-----+--------+-----------+
+| sid | sname  | compname  |
++-----+--------+-----------+
+|   1 | aniket | TCS       |
+|   2 | amit   | Infosys   |
+|   3 | sandip | Wipro     |
+|   4 | pravin | Accenture |
+|   5 | raj    | Capgemini |
++-----+--------+-----------+
+5 rows in set (0.00 sec)
+---------------------------------------------------------------------
+
+Query5: Show all batches even if no students are assigned to them.
+Hint: Use LEFT JOIN (batch ? sbjoin)
+ans;
+mysql> select b.*,s.* from batch b left join sbjoin sb on b.bid=sb.bid left join student s on s.sid=sb.sid;
++-----+----------------------------+------+------+---------+
+| bid | bname                      | cid  | sid  | sname   |
++-----+----------------------------+------+------+---------+
+|   1 | java morning batch         |    1 |    1 | aniket  |
+|   1 | java morning batch         |    1 |    6 | swapnil |
+|   2 | java evening batch         |    1 |    2 | amit    |
+|   3 | python morning batch       |    2 |    3 | sandip  |
+|   3 | python morning batch       |    2 |    5 | raj     |
+|   4 | data science morning batch |    3 |    3 | sandip  |
+|   5 | aiml morning batch         |    4 |    4 | pravin  |
+|   7 | aim avening batch          |    4 | NULL | NULL    |
++-----+----------------------------+------+------+---------+
+8 rows in set (0.00 sec)
+-------------------------------------------------------------------------------
+Query6: Display all courses and the batches under each course.
+Hint: Join course and batch
+ans:
+mysql> select c.*,b.* from course c inner join batch b on c.cid=b.cid;
++-----+-------------------+-----+----------------------------+------+
+| cid | cname             | bid | bname                      | cid  |
++-----+-------------------+-----+----------------------------+------+
+|   1 | java full stack   |   1 | java morning batch         |    1 |
+|   1 | java full stack   |   2 | java evening batch         |    1 |
+|   2 | python full stack |   3 | python morning batch       |    2 |
+|   3 | data science      |   4 | data science morning batch |    3 |
+|   4 | aiml              |   5 | aiml morning batch         |    4 |
+|   4 | aiml              |   7 | aim avening batch          |    4 |
++-----+-------------------+-----+----------------------------+------+
+6 rows in set (0.00 sec)
+--------------------------------------------------------------------------
+
+Query7: Show student names with their batch names.
+Hint: Multi-table join (student, sbjoin, batch)
+ans :
+mysql> select s.*,b.* from student s inner join sbjoin sb on s.sid=sb.sid inner join batch b on sb.bid=b.bid;
++-----+---------+-----+----------------------------+------+
+| sid | sname   | bid | bname                      | cid  |
++-----+---------+-----+----------------------------+------+
+|   1 | aniket  |   1 | java morning batch         |    1 |
+|   2 | amit    |   2 | java evening batch         |    1 |
+|   3 | sandip  |   3 | python morning batch       |    2 |
+|   3 | sandip  |   4 | data science morning batch |    3 |
+|   4 | pravin  |   5 | aiml morning batch         |    4 |
+|   5 | raj     |   3 | python morning batch       |    2 |
+|   6 | swapnil |   1 | java morning batch         |    1 |
++-----+---------+-----+----------------------------+------+
+7 rows in set (0.00 sec)
+-----------------------------------------------------------------------------
+
+Query8: List all students and their placement details (if available).
+Hint: Use LEFT JOIN (student ? placement)
+ans:
+mysql> select s.*,p.* from student s left join placement p on s.sid=p.sid;
++-----+---------+------+-----------+---------+------+
+| sid | sname   | pid  | compname  | package | sid  |
++-----+---------+------+-----------+---------+------+
+|   1 | aniket  |    1 | TCS       |  600000 |    1 |
+|   2 | amit    |    2 | Infosys   |  550000 |    2 |
+|   3 | sandip  |    3 | Wipro     |  500000 |    3 |
+|   4 | pravin  |    4 | Accenture |  700000 |    4 |
+|   5 | raj     |    5 | Capgemini |  650000 |    5 |
+|   6 | swapnil | NULL | NULL      |    NULL | NULL |
+|   7 | rahul   | NULL | NULL      |    NULL | NULL |
++-----+---------+------+-----------+---------+------+
+7 rows in set (0.00 sec)
+----------------------------------------------------------------------------
+
+Query9: Display all courses even if no students are enrolled in them.
+Hint: LEFT JOIN with csjoin
+mysql> select c.*,s.* from course c left join csjoin cs on c.cid=cs.cid left join student s on cs.sid=s.sid;
++-----+-------------------+------+---------+
+| cid | cname             | sid  | sname   |
++-----+-------------------+------+---------+
+|   1 | java full stack   |    1 | aniket  |
+|   1 | java full stack   |    6 | swapnil |
+|   1 | java full stack   |    2 | amit    |
+|   2 | python full stack |    3 | sandip  |
+|   2 | python full stack |    5 | raj     |
+|   3 | data science      |    4 | pravin  |
+|   4 | aiml              |    4 | pravin  |
++-----+-------------------+------+---------+
+7 rows in set (0.00 sec)
+--------------------------------------------------------------------------------
+
+Query10.Show all combinations of students and courses.
+Hint: Use CROSS JOIN
+ans: syntax : SELECT *
+FROM table1
+CROSS JOIN table2;
+
+note : in cross join we not use the 'on'
+
+mysql> select s.*,c.* from student s cross join course c;
++-----+---------+-----+-------------------+
+| sid | sname   | cid | cname             |
++-----+---------+-----+-------------------+
+|   1 | aniket  |   4 | aiml              |
+|   1 | aniket  |   3 | data science      |
+|   1 | aniket  |   2 | python full stack |
+|   1 | aniket  |   1 | java full stack   |
+|   2 | amit    |   4 | aiml              |
+|   2 | amit    |   3 | data science      |
+|   2 | amit    |   2 | python full stack |
+|   2 | amit    |   1 | java full stack   |
+|   3 | sandip  |   4 | aiml              |
+|   3 | sandip  |   3 | data science      |
+|   3 | sandip  |   2 | python full stack |
+|   3 | sandip  |   1 | java full stack   |
+|   4 | pravin  |   4 | aiml              |
+|   4 | pravin  |   3 | data science      |
+|   4 | pravin  |   2 | python full stack |
+|   4 | pravin  |   1 | java full stack   |
+|   5 | raj     |   4 | aiml              |
+|   5 | raj     |   3 | data science      |
+|   5 | raj     |   2 | python full stack |
+|   5 | raj     |   1 | java full stack   |
+|   6 | swapnil |   4 | aiml              |
+|   6 | swapnil |   3 | data science      |
+|   6 | swapnil |   2 | python full stack |
+|   6 | swapnil |   1 | java full stack   |
+|   7 | rahul   |   4 | aiml              |
+|   7 | rahul   |   3 | data science      |
+|   7 | rahul   |   2 | python full stack |
+|   7 | rahul   |   1 | java full stack   |
++-----+---------+-----+-------------------+
+28 rows in set (0.01 sec)
+---------------------------------------------------------------------
+
+Query11: Find students who are enrolled in both a course and a batch.
+Hint: Combine csjoin and sbjoin
+ans :
+mysql> select s.* from student s inner join csjoin cs on s.sid=cs.sid inner join sbjoin sb on s.sid=sb.sid;
++-----+---------+
+| sid | sname   |
++-----+---------+
+|   1 | aniket  |
+|   2 | amit    |
+|   3 | sandip  |
+|   3 | sandip  |
+|   4 | pravin  |
+|   4 | pravin  |
+|   5 | raj     |
+|   6 | swapnil |
++-----+---------+
+8 rows in set (0.00 sec)
+
+mysql> select distinct s.* from student s inner join csjoin cs on s.sid=cs.sid inner join sbjoin sb on s.sid=sb.sid;
++-----+---------+
+| sid | sname   |
++-----+---------+
+|   1 | aniket  |
+|   2 | amit    |
+|   3 | sandip  |
+|   4 | pravin  |
+|   5 | raj     |
+|   6 | swapnil |
++-----+---------+
+6 rows in set (0.00 sec)
+----------------------------------------------------------------
+
+Query12: List students along with course and batch names simultaneously.
+Hint: Join 4 tables together
+ans:
+mysql> select s.sid,s.sname,c.cname,b.bname from student s inner join sbjoin sb on s.sid=sb.sid inner join batch b on sb.bid=b.bid inner join csjoin cs on cs.sid=s.sid inner join course c on c.cid=cs.cid;
++-----+---------+-------------------+----------------------------+
+| sid | sname   | cname             | bname                      |
++-----+---------+-------------------+----------------------------+
+|   1 | aniket  | java full stack   | java morning batch         |
+|   6 | swapnil | java full stack   | java morning batch         |
+|   2 | amit    | java full stack   | java evening batch         |
+|   3 | sandip  | python full stack | python morning batch       |
+|   3 | sandip  | python full stack | data science morning batch |
+|   5 | raj     | python full stack | python morning batch       |
+|   4 | pravin  | data science      | aiml morning batch         |
+|   4 | pravin  | aiml              | aiml morning batch         |
++-----+---------+-------------------+----------------------------+
+8 rows in set (0.00 sec)
+
+mysql> select s.sid,s.sname,c.cname,b.bname from student s inner join sbjoin sb on s.sid=sb.sid inner join csjoin cs on cs.sid=s.sid inner join batch b on b.bid=sb.bid and b.cid=cs.cid inner join course c on c.cid=cs.cid;
++-----+---------+-------------------+----------------------+
+| sid | sname   | cname             | bname                |
++-----+---------+-------------------+----------------------+
+|   1 | aniket  | java full stack   | java morning batch   |
+|   6 | swapnil | java full stack   | java morning batch   |
+|   2 | amit    | java full stack   | java evening batch   |
+|   3 | sandip  | python full stack | python morning batch |
+|   5 | raj     | python full stack | python morning batch |
+|   4 | pravin  | aiml              | aiml morning batch   |
++-----+---------+-------------------+----------------------+
+6 rows in set (0.00 sec)
+
+--------------------------------------------------------------------------------
+
+Query13: Show all students who are not yet placed.
+Hint: LEFT JOIN + NULL filtering
+ans:
+mysql> select s.*,p.* from student s left join placement p on s.sid=p.sid where p.pid is null;
++-----+---------+------+----------+---------+------+
+| sid | sname   | pid  | compname | package | sid  |
++-----+---------+------+----------+---------+------+
+|   6 | swapnil | NULL | NULL     |    NULL | NULL |
+|   7 | rahul   | NULL | NULL     |    NULL | NULL |
++-----+---------+------+----------+---------+------+
+2 rows in set (0.00 sec)
+----------------------------------------------------------------------------
+
+Query14: Display courses that have no batches created yet.
+Hint: LEFT JOIN (course ? batch) + NULL check
+ans:
+mysql> select c.*,b.* from course c left join batch b on c.cid=b.cid where b.bid is null;
++-----+----------------+------+-------+------+
+| cid | cname          | bid  | bname | cid  |
++-----+----------------+------+-------+------+
+|   5 | data analytics | NULL | NULL  | NULL |
++-----+----------------+------+-------+------+
+1 row in set (0.00 sec)
+--------------------------------------------------------------------------------
+Query15: List all batches with number of students in each batch.
+Hint: JOIN + GROUP BY
+ans:
+mysql> select b.*,count(sb.sid) as stud_count from batch b left join sbjoin sb on sb.bid=b.bid group by b.bid;
++-----+----------------------------+------+------------+
+| bid | bname                      | cid  | stud_count |
++-----+----------------------------+------+------------+
+|   1 | java morning batch         |    1 |          2 |
+|   2 | java evening batch         |    1 |          1 |
+|   3 | python morning batch       |    2 |          2 |
+|   4 | data science morning batch |    3 |          1 |
+|   5 | aiml morning batch         |    4 |          1 |
+|   7 | aim avening batch          |    4 |          0 |
++-----+----------------------------+------+------------+
+6 rows in set (0.00 sec)
+-----------------------------------------------------------------------------
+
+Query16: Show students who are enrolled in multiple batches.
+Hint: Self aggregation on sbjoin
+ans:
+mysql> select s.*,count(sb.sid) from student s inner join sbjoin sb on s.sid=sb.sid group by sb.sid having count(sb.bid)>1;
++-----+--------+---------------+
+| sid | sname  | count(sb.sid) |
++-----+--------+---------------+
+|   3 | sandip |             2 |
++-----+--------+---------------+
+1 row in set (0.00 sec)
+-----------------------------------------------------------------------------
+
+
+Query17: Find all students along with their course and placement package.
+Hint: Multi-join including placement
+ans:
+mysql> select s.*,c.cname as course,p.package as package from student s left join csjoin cs on s.sid=cs.sid left join placement p on s.sid=p.sid left join course c on cs.cid=c.cid;
++-----+---------+-------------------+---------+
+| sid | sname   | course            | package |
++-----+---------+-------------------+---------+
+|   1 | aniket  | java full stack   |  600000 |
+|   2 | amit    | java full stack   |  550000 |
+|   3 | sandip  | python full stack |  500000 |
+|   4 | pravin  | data science      |  700000 |
+|   4 | pravin  | aiml              |  700000 |
+|   5 | raj     | python full stack |  650000 |
+|   6 | swapnil | java full stack   |    NULL |
+|   7 | rahul   | NULL              |    NULL |
++-----+---------+-------------------+---------+
+8 rows in set (0.00 sec)
+-------------------------------------------------------------------------
+
+Query18: Display companies along with student names and their course.
+Hint: Join placement, student, csjoin, course
+ans :
+mysql> select p.compname,s.sname,c.cname from placement p inner join student s on p.sid=s.sid inner join csjoin cs on cs.sid=s.sid inner join course c on cs.cid=c.cid;
++-----------+--------+-------------------+
+| compname  | sname  | cname             |
++-----------+--------+-------------------+
+| TCS       | aniket | java full stack   |
+| Infosys   | amit   | java full stack   |
+| Wipro     | sandip | python full stack |
+| Accenture | pravin | data science      |
+| Accenture | pravin | aiml              |
+| Capgemini | raj    | python full stack |
++-----------+--------+-------------------+
+6 rows in set (0.00 sec)
+-----------------------------------------------------------------------
+
+Query19: List courses and count of students enrolled in each.
+Hint: JOIN + aggregation\
+ans:
+mysql> select c.cname,count(cs.sid) stud_count from course c left join csjoin cs on c.cid=cs.cid group by c.cid;
++-------------------+------------+
+| cname             | stud_count |
++-------------------+------------+
+| java full stack   |          3 |
+| python full stack |          2 |
+| data science      |          1 |
+| aiml              |          1 |
+| data analytics    |          0 |
+| genai             |          0 |
++-------------------+------------+
+6 rows in set (0.00 sec)
+------------------------------------------------------------------------------
+Query20: Show batches where no students are assigned.
+Hint: LEFT JOIN + NULL
+ans:
+mysql> select b.bname,count(sb.sid) from batch b left join sbjoin sb on b.bid=sb.bid group by b.bid having count(sb.sid)<1;
++-------------------+---------------+
+| bname             | count(sb.sid) |
++-------------------+---------------+
+| aim avening batch |             0 |
++-------------------+---------------+
+1 row in set (0.00 sec)
+
+mysql>
+-----------------------------------------------------------------------------
+Query21: Find students who are in a batch but not enrolled in any course.
+Hint: Compare sbjoin vs csjoin
+ans:
+mysql> select s.sid,s.sname,sb.bid,cs.cid from student s inner join sbjoin sb on s.sid=sb.sid left join csjoin cs on s.sid=cs.sid where cs.cid is null;
++-----+-------+------+------+
+| sid | sname | bid  | cid  |
++-----+-------+------+------+
+|   8 | john  |    5 | NULL |
++-----+-------+------+------+
+1 row in set (0.00 sec)
+
+mysql>
+---------------------------------------------------------------------
+
+Query22: List students who are enrolled in a course but not assigned to any batch.
+Hint: Opposite condition of above
+mysql> select s.sname,cs.cid,sb.bid from student s inner join csjoin cs on s.sid=cs.sid left join sbjoin sb on s.sid = sb.sid where sb.bid is null;
++--------+------+------+
+| sname  | cid  | bid  |
++--------+------+------+
+| hardik |    1 | NULL |
++--------+------+------+
+1 row in set (0.00 sec)
+--------------------------------------------------------------------------
+
+Query23: Display students who are placed but their course is missing.
+Hint: Multi JOIN + NULL condition
+ans:
+mysql> select s.sname,p.compname,p.package from student s inner join placement p on s.sid=p.sid left join csjoin cs on s.sid=cs.sid where cs.cid is null;
++-------+--------------+---------+
+| sname | compname     | package |
++-------+--------------+---------+
+| john  | byteSolution |  550000 |
++-------+--------------+---------+
+1 row in set (0.00 sec)
+-----------------------------------------------------------------------
+
+Query24: Find the highest package offered in each course.
+Hint: Join + GROUP BY + aggregate function
+ans:
+mysql> select c.cname as course,max(p.package) from course c inner join csjoin cs on c.cid=cs.cid inner join placement p on p.sid=cs.sid group by cs.cid;
++-------------------+----------------+
+| course            | max(p.package) |
++-------------------+----------------+
+| java full stack   |         600000 |
+| python full stack |         650000 |
+| data science      |         700000 |
+| aiml              |         700000 |
++-------------------+----------------+
+4 rows in set (0.00 sec)
+----------------------------------------------------------------------
+Query25: List students along with batch, course, and placement details in one result.
+Hint: Complex multi-table join
+mysql> select s.sname,b.bname,c.cname,p.compname,p.package from student s inner join sbjoin sb on s.sid=sb.sid inner join batch b on sb.bid=b.bid inner join course c on b.cid=c.cid inner join placement p on p.sid=s.sid;
++--------+----------------------------+-------------------+--------------+---------+
+| sname  | bname                      | cname             | compname     | package |
++--------+----------------------------+-------------------+--------------+---------+
+| aniket | java morning batch         | java full stack   | TCS          |  600000 |
+| amit   | java evening batch         | java full stack   | Infosys      |  550000 |
+| sandip | python morning batch       | python full stack | Wipro        |  500000 |
+| raj    | python morning batch       | python full stack | Capgemini    |  650000 |
+| sandip | data science morning batch | data science      | Wipro        |  500000 |
+| pravin | aiml morning batch         | aiml              | Accenture    |  700000 |
+| john   | aiml morning batch         | aiml              | byteSolution |  550000 |
++--------+----------------------------+-------------------+--------------+---------+
+7 rows in set (0.00 sec)
+----------------------------------------------------------------------------
+Query:26: Find courses where all students are placed.
+Hint: Advanced logic using joins + aggregation
+ans:
+mysql> select c.cname,count(distinct cs.sid),count(distinct p.sid) from course c inner join csjoin cs on c.cid=cs.cid left join placement p on p.sid=cs.sid group by c.cid,c.cname having count(distinct cs.sid)=count(distinct p.sid);
++-------------------+------------------------+-----------------------+
+| cname             | count(distinct cs.sid) | count(distinct p.sid) |
++-------------------+------------------------+-----------------------+
+| python full stack |                      2 |                     2 |
+| data science      |                      1 |                     1 |
+| aiml              |                      1 |                     1 |
++-------------------+------------------------+-----------------------+
+3 rows in set (0.00 sec)
+---------------------------------------------------------------------------
+Query27: Show students who share the same batch (SELF JOIN on student via sbjoin).
+Hint: Practice SELF JOIN
+
+Query28: Find students who are enrolled in more than one course.
+Hint: GROUP BY + HAVING
+
+Query29: Display batches where students belong to different courses.
+Hint: Complex join logic across sbjoin and csjoin
+
+Query30: Find top 3 students with highest placement packages along with course and batch details.
+Hint: JOIN + ORDER BY + LIMIT + multi-table relation.
 
 
 
