@@ -2298,15 +2298,423 @@ mysql> select c.cname,count(distinct cs.sid),count(distinct p.sid) from course c
 ---------------------------------------------------------------------------
 Query27: Show students who share the same batch (SELF JOIN on student via sbjoin).
 Hint: Practice SELF JOIN
+ans:
+mysql> select s1.sname,s2.sname,sb1.bid from student s1 inner join sbjoin sb1 on s1.sid=sb1.sid inner join sbjoin sb2 on sb1.bid=sb2.bid inner join student s2 on sb2.sid=s2.sid where s1.sid<s2.sid;
++--------+---------+------+
+| sname  | sname   | bid  |
++--------+---------+------+
+| aniket | swapnil |    1 |
+| sandip | raj     |    3 |
+| pravin | john    |    5 |
++--------+---------+------+
+3 rows in set (0.00 sec)
+-------------------------------------------------------------------------
 
 Query28: Find students who are enrolled in more than one course.
 Hint: GROUP BY + HAVING
-
+ans:
+mysql> select sname,count(cs.cid) as course_count from student s inner join csjoin cs on s.sid=cs.sid group by s.sid,s.sname having count(cs.cid)>1;
++--------+--------------+
+| sname  | course_count |
++--------+--------------+
+| aniket |            3 |
+| amit   |            2 |
+| pravin |            2 |
+| raj    |            2 |
++--------+--------------+
+4 rows in set (0.00 sec)
+-------------------------------------------------------------------------
 Query29: Display batches where students belong to different courses.
 Hint: Complex join logic across sbjoin and csjoin
-
+ans:
+mysql> select b.bname,count(distinct cs.cid) as CourseCount from batch b inner join sbjoin sb on b.bid=sb.bid inner join csjoin cs on sb.sid=cs.sid group by sb.bid having count(distinct cs.cid)>1;
++----------------------+-------------+
+| bname                | CourseCount |
++----------------------+-------------+
+| java morning batch   |           3 |
+| java evening batch   |           2 |
+| python morning batch |           2 |
+| aiml morning batch   |           2 |
++----------------------+-------------+
+4 rows in set (0.00 sec)
+------------------------------------------------------------------------------------------------------
 Query30: Find top 3 students with highest placement packages along with course and batch details.
 Hint: JOIN + ORDER BY + LIMIT + multi-table relation.
+ans :
+mysql>  select s.sname,p.package,p.compname,c.cname,b.bname from ( select * from placement order by package desc limit 3) p  inner join student s on s.sid=p.sid inner join csjoin cs on s.sid=cs.sid inner join sbjoin sb on s.sid =sb.sid inner join batch b on sb.bid=b.bid and cs.cid=b.cid inner join course c on cs.cid=c.cid ;
++--------+---------+-----------+-------------------+----------------------+
+| sname  | package | compname  | cname             | bname                |
++--------+---------+-----------+-------------------+----------------------+
+| pravin |  700000 | Accenture | aiml              | aiml morning batch   |
+| raj    |  650000 | Capgemini | python full stack | python morning batch |
+| aniket |  600000 | TCS       | java full stack   | java morning batch   |
++--------+---------+-----------+-------------------+----------------------+
+3 rows in set (0.00 sec)
+
+mysql>
+********************************************************************************************
+1. Customer Table
+CREATE TABLE customer (
+customer_id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+email VARCHAR(150) UNIQUE NOT NULL,
+phone VARCHAR(15) UNIQUE,
+address TEXT NOT NULL,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+2. Category Table
+CREATE TABLE category (
+category_id INT AUTO_INCREMENT PRIMARY KEY,
+category_name VARCHAR(100) NOT NULL UNIQUE
+);
+
+3. Product Table
+CREATE TABLE product (
+product_id INT AUTO_INCREMENT PRIMARY KEY,
+product_name VARCHAR(200) NOT NULL,
+price DECIMAL(10,2) NOT NULL CHECK (price > 0),
+stock INT NOT NULL CHECK (stock >= 0),
+category_id INT,
+FOREIGN KEY (category_id) REFERENCES category(category_id)
+ON DELETE SET NULL
+ON UPDATE CASCADE
+);
+
+4. Orders Table
+CREATE TABLE orders (
+order_id INT AUTO_INCREMENT PRIMARY KEY,
+customer_id INT NOT NULL,
+order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+status VARCHAR(50) DEFAULT 'Pending',
+FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+);
+
+5. Order_Items Table
+CREATE TABLE order_items (
+order_id INT,
+product_id INT,
+quantity INT NOT NULL CHECK (quantity > 0),
+price DECIMAL(10,2) NOT NULL CHECK (price > 0),
+PRIMARY KEY (order_id, product_id),
+FOREIGN KEY (order_id) REFERENCES orders(order_id)
+ON DELETE CASCADE,
+FOREIGN KEY (product_id) REFERENCES product(product_id)
+ON DELETE CASCADE
+);
+
+6. Payment Table
+CREATE TABLE payment (
+payment_id INT AUTO_INCREMENT PRIMARY KEY,
+order_id INT UNIQUE,
+payment_method VARCHAR(50) NOT NULL,
+payment_status VARCHAR(50) DEFAULT 'Pending',
+amount DECIMAL(10,2) NOT NULL CHECK (amount > 0),
+FOREIGN KEY (order_id) REFERENCES orders(order_id)
+ON DELETE CASCADE
+);
+
+7. Shipping Table
+CREATE TABLE shipping (
+shipping_id INT AUTO_INCREMENT PRIMARY KEY,
+order_id INT UNIQUE,
+address TEXT NOT NULL,
+city VARCHAR(100) NOT NULL,
+postal_code VARCHAR(10) NOT NULL,
+delivery_status VARCHAR(50) DEFAULT 'Processing',
+FOREIGN KEY (order_id) REFERENCES orders(order_id)
+ON DELETE CASCADE
+);
+
+8.Review Table
+CREATE TABLE review (
+review_id INT AUTO_INCREMENT PRIMARY KEY,
+customer_id INT,
+product_id INT,
+rating INT CHECK (rating BETWEEN 1 AND 5),
+comment TEXT,
+review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+ON DELETE CASCADE,
+FOREIGN KEY (product_id) REFERENCES product(product_id)
+ON DELETE CASCADE
+);
 
 
+Perform following queries on above database tables
+
+Query1. List all customers
+ans:
+mysql> select * from customer;
++-------------+---------------+------------------+------------+-------------------------+---------------------+
+| customer_id | name          | email            | phone      | address                 | created_at          |
++-------------+---------------+------------------+------------+-------------------------+---------------------+
+|           1 | Aniket Kasav  | aniket@gmail.com | 9876543210 | Nashik, Maharashtra     | 2026-09-21 11:44:47 |
+|           2 | Rahul Sharma  | rahul@gmail.com  | 9876543211 | Pune, Maharashtra       | 2026-09-21 11:44:47 |
+|           3 | Priya Patil   | priya@gmail.com  | 9876543212 | Mumbai, Maharashtra     | 2026-09-21 11:44:47 |
+|           4 | Amit Deshmukh | amit@gmail.com   | 9876543213 | Aurangabad, Maharashtra | 2026-09-21 11:44:47 |
+|           5 | Sneha Joshi   | sneha@gmail.com  | 9876543214 | Nagpur, Maharashtra     | 2026-09-21 11:44:47 |
+|           6 | Rohit More    | rohit@gmail.com  | 9876543215 | Nashik, Maharashtra     | 2026-09-21 11:44:47 |
+|           7 | Pooja Shinde  | pooja@gmail.com  | 9876543216 | Pune, Maharashtra       | 2026-09-21 11:44:47 |
+|           8 | Vikas Pawar   | vikas@gmail.com  | 9876543217 | Kolhapur, Maharashtra   | 2026-09-21 11:44:47 |
+|           9 | Neha Kulkarni | neha@gmail.com   | 9876543218 | Satara, Maharashtra     | 2026-09-21 11:44:47 |
+|          10 | Sagar Jadhav  | sagar@gmail.com  | 9876543219 | Thane, Maharashtra      | 2026-09-21 11:44:47 |
++-------------+---------------+------------------+------------+-------------------------+---------------------+
+10 rows in set (0.00 sec)
+------------------------------------------------------------------------------
+Query2. Show all product names and prices
+ans:
+mysql> select product_name,price from product;
++-----------------------+---------+
+| product_name          | price   |
++-----------------------+---------+
+| Wireless Mouse        |  599.00 |
+| Mechanical Keyboard   | 2499.00 |
+| Bluetooth Headphones  | 1999.00 |
+| Cotton T-Shirt        |  499.00 |
+| Denim Jeans           | 1499.00 |
+| Java Programming Book |  799.00 |
+| SQL Interview Guide   |  599.00 |
+| Electric Kettle       | 1299.00 |
+| Mixer Grinder         | 3499.00 |
+| Cricket Bat           | 2499.00 |
+| Football              |  899.00 |
+| Yoga Mat              |  699.00 |
++-----------------------+---------+
+12 rows in set (0.00 sec)
+-------------------------------------------------------------------------------
+Query3. Find products with price greater than 50
+ans:
+mysql> select product_name,price from product where price>50;
++-----
+---------------------------------+---------+
+| product_name          | price   |
++-----------------------+---------+
+| Wireless Mouse        |  599.00 |
+| Mechanical Keyboard   | 2499.00 |
+| Bluetooth Headphones  | 1999.00 |
+| Cotton T-Shirt        |  499.00 |
+| Denim Jeans           | 1499.00 |
+| Java Programming Book |  799.00 |
+| SQL Interview Guide   |  599.00 |
+| Electric Kettle       | 1299.00 |
+| Mixer Grinder         | 3499.00 |
+| Cricket Bat           | 2499.00 |
+| Football              |  899.00 |
+| Yoga Mat              |  699.00 |
++-----------------------+---------+
+12 rows in set (0.00 sec)
+-------------------------------------------------------
+Query4. List all categories
+mysql> select * from category;
++-------------+-----------------+
+| category_id | category_name   |
++-------------+-----------------+
+|           3 | Books           |
+|           2 | Clothing        |
+|           1 | Electronics     |
+|           4 | Home Appliances |
+|           5 | Sports          |
++-------------+-----------------+
+5 rows in set (0.00 sec)
+---------------------------------------------------------
+Query5. Find customers created after a specific date
+ans:
+mysql> select * from customer where created_at>'2026-09-21';
++-------------+---------------+------------------+------------+-------------------------+---------------------+
+| customer_id | name          | email            | phone      | address                 | created_at          |
++-------------+---------------+------------------+------------+-------------------------+---------------------+
+|           1 | Aniket Kasav  | aniket@gmail.com | 9876543210 | Nashik, Maharashtra     | 2026-09-21 11:44:47 |
+|           2 | Rahul Sharma  | rahul@gmail.com  | 9876543211 | Pune, Maharashtra       | 2026-09-21 11:44:47 |
+|           3 | Priya Patil   | priya@gmail.com  | 9876543212 | Mumbai, Maharashtra     | 2026-09-21 11:44:47 |
+|           4 | Amit Deshmukh | amit@gmail.com   | 9876543213 | Aurangabad, Maharashtra | 2026-09-21 11:44:47 |
+|           5 | Sneha Joshi   | sneha@gmail.com  | 9876543214 | Nagpur, Maharashtra     | 2026-09-21 11:44:47 |
+|           6 | Rohit More    | rohit@gmail.com  | 9876543215 | Nashik, Maharashtra     | 2026-09-21 11:44:47 |
+|           7 | Pooja Shinde  | pooja@gmail.com  | 9876543216 | Pune, Maharashtra       | 2026-09-21 11:44:47 |
+|           8 | Vikas Pawar   | vikas@gmail.com  | 9876543217 | Kolhapur, Maharashtra   | 2026-09-21 11:44:47 |
+|           9 | Neha Kulkarni | neha@gmail.com   | 9876543218 | Satara, Maharashtra     | 2026-09-21 11:44:47 |
+|          10 | Sagar Jadhav  | sagar@gmail.com  | 9876543219 | Thane, Maharashtra      | 2026-09-21 11:44:47 |
++-------------+---------------+------------------+------------+-------------------------+---------------------+
+10 rows in set (0.34 sec)
+-----------------------------------------------------------------
+Query6. Display orders with status 'Pending'
+mysql> select * from orders where status='Pending';
++----------+-------------+---------------------+---------+
+| order_id | customer_id | order_date          | status  |
++----------+-------------+---------------------+---------+
+|        4 |           1 | 2026-09-04 14:20:00 | Pending |
+|       10 |           8 | 2026-09-10 17:20:00 | Pending |
++----------+-------------+---------------------+---------+
+2 rows in set (0.00 sec)
+---------------------------------------------------------------
+Query7. Show all products with stock less than 10
+mysql> select * from product where stock<10;
+Empty set (0.00 sec)
+-------------------------------------------------------------------
+Query8. Get all reviews with rating 5
+mysql> select * from review where rating=5;
++-----------+-------------+------------+--------+--------------------------------+---------------------+
+| review_id | customer_id | product_id | rating | comment                        | review_date         |
++-----------+-------------+------------+--------+--------------------------------+---------------------+
+|         1 |           1 |          1 |      5 | Very good wireless mouse.      | 2026-09-05 10:00:00 |
+|         3 |           3 |          3 |      5 | Excellent sound quality.       | 2026-09-07 12:00:00 |
+|         5 |           5 |         10 |      5 | Good cricket bat.              | 2026-09-09 15:00:00 |
+|         7 |           7 |          4 |      5 | Comfortable cotton t-shirt.    | 2026-09-11 14:00:00 |
+|         8 |           8 |          6 |      5 | Helpful Java programming book. | 2026-09-12 10:30:00 |
+|        11 |           2 |         12 |      5 | Good quality yoga mat.         | 2026-09-15 09:45:00 |
++-----------+-------------+------------+--------+--------------------------------+---------------------+
+6 rows in set (0.00 sec)
+Query9. List all payments with status 'Completed'
+mysql> select * from payment where payment_status='Completed';
++------------+----------+------------------+----------------+---------+
+| payment_id | order_id | payment_method   | payment_status | amount  |
++------------+----------+------------------+----------------+---------+
+|          1 |        1 | UPI              | Completed      | 1997.00 |
+|          2 |        2 | Credit Card      | Completed      | 3497.00 |
+|          3 |        3 | Debit Card       | Completed      | 2598.00 |
+|          5 |        5 | Cash on Delivery | Completed      | 4798.00 |
+|          7 |        7 | Credit Card      | Completed      | 2397.00 |
+|          8 |        8 | UPI              | Completed      | 2296.00 |
+|          9 |        9 | Debit Card       | Completed      | 4498.00 |
+|         11 |       11 | Cash on Delivery | Completed      | 3198.00 |
+|         12 |       12 | UPI              | Completed      | 2098.00 |
++------------+----------+------------------+----------------+---------+
+9 rows in set (0.00 sec)
+-----------------------------------------------------------------------------
+Query10. Show shipping records with 'Processing' status
+mysql> select * from shipping where delivery_status='Processing';
++-------------+----------+---------------+--------+-------------+-----------------+
+| shipping_id | order_id | address       | city   | postal_code | delivery_status |
++-------------+----------+---------------+--------+-------------+-----------------+
+|           4 |        4 | Gangapur Road | Nashik | 422013      | Processing      |
+|          10 |       10 | Shivajinagar  | Pune   | 411005      | Processing      |
++-------------+----------+---------------+--------+-------------+-----------------+
+2 rows in set (0.35 sec)
+--------------------------------------------------------------------------
+Query11. List all customers with their orders
+mysql> select c.customer_id,c.name,o.order_id from customer c left join orders o on c.customer_id=o.customer_id;
++-------------+---------------+----------+
+| customer_id | name          | order_id |
++-------------+---------------+----------+
+|           1 | Aniket Kasav  |        1 |
+|           1 | Aniket Kasav  |        4 |
+|           1 | Aniket Kasav  |       12 |
+|           2 | Rahul Sharma  |        2 |
+|           2 | Rahul Sharma  |        9 |
+|           3 | Priya Patil   |        3 |
+|           4 | Amit Deshmukh |        5 |
+|           5 | Sneha Joshi   |        6 |
+|           6 | Rohit More    |        7 |
+|           7 | Pooja Shinde  |        8 |
+|           8 | Vikas Pawar   |       10 |
+|           9 | Neha Kulkarni |       11 |
+|          10 | Sagar Jadhav  |     NULL |
++-------------+---------------+----------+
+13 rows in set (0.00 sec)
+-----------------------------------------------------------------------
+Query12. Show products along with their category names
+mysql> select p.product_name,c.category_name from product p inner join category c on p.category_id=c.category_id;
++-----------------------+-----------------+
+| product_name          | category_name   |
++-----------------------+-----------------+
+| Java Programming Book | Books           |
+| SQL Interview Guide   | Books           |
+| Cotton T-Shirt        | Clothing        |
+| Denim Jeans           | Clothing        |
+| Wireless Mouse        | Electronics     |
+| Mechanical Keyboard   | Electronics     |
+| Bluetooth Headphones  | Electronics     |
+| Electric Kettle       | Home Appliances |
+| Mixer Grinder         | Home Appliances |
+| Cricket Bat           | Sports          |
+| Football              | Sports          |
+| Yoga Mat              | Sports          |
++-----------------------+-----------------+
+12 rows in set (0.00 sec)
+---------------------------------------------------------------------
+Query13. Find total number of orders placed by each customer
+mysql> select c.name,count(*) as Total_order from customer c inner join orders o on c.customer_id=o.customer_id group by c.name;
++---------------+-------------+
+| name          | Total_order |
++---------------+-------------+
+| Aniket Kasav  |           3 |
+| Rahul Sharma  |           2 |
+| Priya Patil   |           1 |
+| Amit Deshmukh |           1 |
+| Sneha Joshi   |           1 |
+| Rohit More    |           1 |
+| Pooja Shinde  |           1 |
+| Vikas Pawar   |           1 |
+| Neha Kulkarni |           1 |
++---------------+-------------+
+9 rows in set (0.00 sec)
+Query14. Display total amount spent per order
+
+Query15. List all orders with customer name and order date
+
+Query16. Find products that have never been ordered
+
+Query17. Get average rating for each product
+
+Query18. List customers who have given reviews
+
+Query19. Find total revenue generated
+
+Query20. Display payment status for each order
+
+Query21. List all orders with shipping city and delivery status
+
+Query22. Find top 5 most expensive products
+
+Query23. Get total quantity sold per product
+
+Query24. List customers who have not placed any orders
+
+Query25. Show orders that have no payment yet
+
+Query 26. Find total number of products in each category
+Hint:Group products by category.
+
+Query27. Display all reviews with customer name and product name
+Hint: Join review, customer, and product.
+
+Query28. Find the most recently placed order
+Hint: Get latest order based on date.
+
+Query 29. List orders with total items count
+Hint: Count number of products in each order.
+
+Query 30. Show customers along with total amount they spent
+Hint: Aggregate payments per customer.
+
+Query31. Find the top 3 customers who spent the most money
+Hint: Rank customers based on total payment amount.
+
+Query32. Identify products with highest average rating (above 4.5)
+Hint: Filter products based on aggregated ratings.
+
+Query33. Find customers who ordered every category of products
+Hint: Advanced grouping and filtering logic.
+
+Query34. Get monthly revenue report
+Hint: Group payments by month and year.
+
+Query 35. Find orders where total amount exceeds average order value
+Hint: Compare each order with overall average.
+
+Query36. Identify duplicate reviews (same customer reviewing same product multiple times)
+Hint: Detect redundant entries.
+
+Query37. Find the most popular product (highest quantity sold)
+Hint: Rank products based on total sales.
+
+Query 38. List customers who placed orders but never made payments
+Hint: Detect incomplete transactions.
+
+Query39. Find products that are low in stock but highly demanded
+Hint: Combine stock condition with high sales.
+
+Query 40. Generate a complete order summary report, Include customer name, order details, total amount, payment status, and shipping status in one result.
 
