@@ -2961,24 +2961,133 @@ mysql> select p.product_id,p.product_name,avg(r.rating) as avg_rating from produ
 ------------------------------------------------------------------------
 Query33. Find customers who ordered every category of products
 Hint: Advanced grouping and filtering logic.
+mysql> select c.customer_id,c.name, count(distinct cat.category_id) as category_count from customer c inner join orders o on c.customer_id=o.customer_id inner join order_items oi on o.order_id=oi.order_id inner join product p on oi.product_id=p.product_id inner join category cat on p.category_id=cat.category_id group by c.customer_id,c.name having count(distinct cat.category_id)=(select count(*) from category);
++-------------+--------------+----------------+
+| customer_id | name         | category_count |
++-------------+--------------+----------------+
+|           1 | Aniket Kasav |              5 |
++-------------+--------------+----------------+
+1 row in set (0.00 sec)
 
+----------------------------------------------------------------
 Query34. Get monthly revenue report
 Hint: Group payments by month and year.
-
+mysql> select date_format(o.order_date,'%y-%m') as Month_Year,sum(p.amount) as monthly_revenue from payment p inner join orders o on p.order_id=o.order_id group by Month_Year;
++------------+-----------------+
+| Month_Year | monthly_revenue |
++------------+-----------------+
+| 26-09      |        33971.00 |
++------------+-----------------+
+1 row in set (0.00 sec)
+--------------------------------------------------------------------------------
 Query 35. Find orders where total amount exceeds average order value
 Hint: Compare each order with overall average.
-
+mysql> select order_id,total_amount from(select order_id,sum(quantity*price) as total_amount from order_items group by order_id) as order_totals where total_amount>(select avg(total_amount) from(select order_id,sum(quantity*price) as total_amount from order_items group by order_id) as avg_order_total);
++----------+--------------+
+| order_id | total_amount |
++----------+--------------+
+|        2 |      3497.00 |
+|        4 |      2897.00 |
+|        5 |      4798.00 |
+|        9 |      4498.00 |
+|       11 |      3198.00 |
++----------+--------------+
+5 rows in set (0.00 sec)
+-----------------------------------------------------------------------------------
 Query36. Identify duplicate reviews (same customer reviewing same product multiple times)
 Hint: Detect redundant entries.
-
+mysql> select customer_id,product_id,count(review_id) from review group by customer_id,product_id having count(review_id)>1;
++-------------+------------+------------------+
+| customer_id | product_id | count(review_id) |
++-------------+------------+------------------+
+|           1 |          2 |                2 |
+|           2 |          3 |                2 |
++-------------+------------+------------------+
+2 rows in set (0.00 sec)
+---------------------------------------------------------------------------------
 Query37. Find the most popular product (highest quantity sold)
 Hint: Rank products based on total sales.
+mysql> select product_id,sum(quantity) as total_sales from order_items group by product_id order by total_sales desc limit 5;
++------------+-------------+
+| product_id | total_sales |
++------------+-------------+
+|          4 |           5 |
+|          1 |           4 |
+|          7 |           3 |
+|         12 |           3 |
+|          2 |           2 |
++------------+-------------+
+5 rows in set (0.00 sec)
 
+mysql>
+--------------------------------------------------------------------------
 Query 38. List customers who placed orders but never made payments
 Hint: Detect incomplete transactions.
+mysql> select c.customer_id,c.name,o.order_id,p.payment_status from customer c inner join orders o on c.customer_id=o.customer_id inner join payment p on o.order_id=p.order_id where payment_status in('Pending','Failed');
++-------------+--------------+----------+----------------+
+| customer_id | name         | order_id | payment_status |
++-------------+--------------+----------+----------------+
+|           1 | Aniket Kasav |        4 | Pending        |
+|           5 | Sneha Joshi  |        6 | Failed         |
+|           8 | Vikas Pawar  |       10 | Pending        |
++-------------+--------------+----------+----------------+
+3 rows in set (0.01 sec)
 
+mysql>
+--------------------------------------------------------------------------
 Query39. Find products that are low in stock but highly demanded
 Hint: Combine stock condition with high sales.
-
-Query 40. Generate a complete order summary report, Include customer name, order details, total amount, payment status, and shipping status in one result.
-
+mysql> select p.product_id,p.product_name,p.stock,sum(oi.quantity) as total_sales from product p inner join order_items oi on p.product_id=oi.product_id where p.stock<10 group by p.product_id,p.product_name,p.stock having sum(oi.quantity)>3;
++------------+----------------+-------+-------------+
+| product_id | product_name   | stock | total_sales |
++------------+----------------+-------+-------------+
+|          1 | Wireless Mouse |     7 |           4 |
+|          4 | Cotton T-Shirt |     5 |           5 |
++------------+----------------+-------+-------------+
+2 rows in set (0.00 sec)
+-------------------------------------------------------------------------
+Query 40. Generate a complete order summary report, Include customer name, order details, total amount, 
+payment status, and shipping status in one result.
+mysql> SELECT
+    ->     c.customer_id,
+    ->     c.name AS customer_name,
+    ->     o.order_id,
+    ->     o.order_date,
+    ->     SUM(oi.quantity * oi.price) AS total_amount,
+    ->     p.payment_status,
+    ->     s.delivery_status AS shipping_status
+    -> FROM customer c
+    -> INNER JOIN orders o
+    ->     ON c.customer_id = o.customer_id
+    -> INNER JOIN order_items oi
+    ->     ON o.order_id = oi.order_id
+    -> LEFT JOIN payment p
+    ->     ON o.order_id = p.order_id
+    -> LEFT JOIN shipping s
+    ->     ON o.order_id = s.order_id
+    -> GROUP BY
+    ->     c.customer_id,
+    ->     c.name,
+    ->     o.order_id,
+    ->     o.order_date,
+    ->     p.payment_status,
+    ->     s.delivery_status
+    -> ORDER BY o.order_id;
++-------------+---------------+----------+---------------------+--------------+----------------+-----------------+
+| customer_id | customer_name | order_id | order_date          | total_amount | payment_status | shipping_status |
++-------------+---------------+----------+---------------------+--------------+----------------+-----------------+
+|           1 | Aniket Kasav  |        1 | 2026-09-01 10:30:00 |      1997.00 | Completed      | Delivered       |
+|           2 | Rahul Sharma  |        2 | 2026-09-02 11:00:00 |      3497.00 | Completed      | Delivered       |
+|           3 | Priya Patil   |        3 | 2026-09-03 12:15:00 |      2598.00 | Completed      | Shipped         |
+|           1 | Aniket Kasav  |        4 | 2026-09-04 14:20:00 |      2897.00 | Pending        | Processing      |
+|           4 | Amit Deshmukh |        5 | 2026-09-05 09:45:00 |      4798.00 | Completed      | Delivered       |
+|           5 | Sneha Joshi   |        6 | 2026-09-06 16:30:00 |      2499.00 | Failed         | Cancelled       |
+|           6 | Rohit More    |        7 | 2026-09-07 10:00:00 |      2397.00 | Completed      | Delivered       |
+|           7 | Pooja Shinde  |        8 | 2026-09-08 13:00:00 |      2296.00 | Completed      | Shipped         |
+|           2 | Rahul Sharma  |        9 | 2026-09-09 15:45:00 |      4498.00 | Completed      | Delivered       |
+|           8 | Vikas Pawar   |       10 | 2026-09-10 17:20:00 |      1198.00 | Pending        | Processing      |
+|           9 | Neha Kulkarni |       11 | 2026-09-11 11:30:00 |      3198.00 | Completed      | Delivered       |
+|           1 | Aniket Kasav  |       12 | 2026-09-12 18:00:00 |      2098.00 | Completed      | Shipped         |
+|           1 | Aniket Kasav  |       13 | 2026-09-23 16:08:20 |      1299.00 | NULL           | NULL            |
++-------------+---------------+----------+---------------------+--------------+----------------+-----------------+
+13 rows in set (0.32 sec)
